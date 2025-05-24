@@ -1,0 +1,18 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="100" fill="url(#grad3)"></circle>
+  <defs>
+    <linearGradient id="grad3" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF9A3D"></stop>
+      <stop offset="100%" stop-color="#FF6B6B"></stop>
+    </linearGradient>
+  </defs>
+  <!-- Person with shield/network -->
+  <path d="M90 140 L110 140 L115 170 L85 170 Z" fill="#FFFFFF" opacity="0.9"></path>
+  <circle cx="100" cy="110" r="20" fill="#FFA36C"></circle>
+  <path d="M95 105 L100 115 L110 100" stroke="#FF6B6B" stroke-width="4" fill="none"></path>
+  <!-- Decorative accents -->
+  <circle cx="40" cy="40" r="8" fill="#3AB0FF"></circle>
+  <circle cx="160" cy="160" r="6" fill="#6C5DD3"></circle>
+</svg>

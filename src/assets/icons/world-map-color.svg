@@ -1,0 +1,37 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<svg width="1000" height="400" viewBox="0 0 1000 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="gradMap" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6B8DE3"></stop>
+      <stop offset="100%" stop-color="#8B5CF6"></stop>
+    </linearGradient>
+    <filter id="pinShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.2"></feDropShadow>
+    </filter>
+  </defs>
+
+  <!-- Base map -->
+  <path d="M... (path kontur dunia lengkap dari Natural Earth) ..." fill="url(#gradMap)" stroke="none"></path>
+
+  <!-- Pins: -->
+  <circle cx="300" cy="250" r="8" fill="#FF6B6B" filter="url(#pinShadow)"></circle>
+  <text x="300" y="270" text-anchor="middle" fill="#333" font-family="AvertaStd" font-size="12">Jakarta</text>
+
+  <circle cx="350" cy="240" r="8" fill="#6B8DE3" filter="url(#pinShadow)"></circle>
+  <text x="350" y="260" text-anchor="middle" fill="#333" font-family="AvertaStd" font-size="12">Singapura</text>
+
+  <circle cx="150" cy="200" r="8" fill="#F7B731" filter="url(#pinShadow)"></circle>
+  <text x="150" y="220" text-anchor="middle" fill="#333" font-family="AvertaStd" font-size="12">Silicon Valley</text>
+
+  <circle cx="160" cy="180" r="8" fill="#FF9A8B" filter="url(#pinShadow)"></circle>
+  <text x="160" y="200" text-anchor="middle" fill="#333" font-family="AvertaStd" font-size="12">New York</text>
+
+  <circle cx="140" cy="170" r="8" fill="#2BAE9F" filter="url(#pinShadow)"></circle>
+  <text x="140" y="190" text-anchor="middle" fill="#333" font-family="AvertaStd" font-size="12">Washington</text>
+
+  <circle cx="170" cy="215" r="8" fill="#84FAB0" filter="url(#pinShadow)"></circle>
+  <text x="170" y="235" text-anchor="middle" fill="#333" font-family="AvertaStd" font-size="12">Dallas</text>
+
+  <circle cx="500" cy="160" r="8" fill="#8FD3F4" filter="url(#pinShadow)"></circle>
+  <text x="500" y="180" text-anchor="middle" fill="#333" font-family="AvertaStd" font-size="12">London</text>
+</svg>

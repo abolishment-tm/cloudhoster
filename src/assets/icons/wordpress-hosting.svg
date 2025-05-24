@@ -1,0 +1,20 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="100" fill="url(#grad2)"></circle>
+  <defs>
+    <linearGradient id="grad2" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3AB0FF"></stop>
+      <stop offset="100%" stop-color="#0066CC"></stop>
+    </linearGradient>
+  </defs>
+  <!-- Webpage monitor illustration -->
+  <rect x="40" y="60" width="120" height="80" rx="10" fill="#FFFFFF" opacity="0.9"></rect>
+  <rect x="55" y="75" width="90" height="40" rx="4" fill="#0066CC"></rect>
+  <circle cx="80" cy="110" r="5" fill="#3AB0FF"></circle>
+  <circle cx="120" cy="110" r="5" fill="#3AB0FF"></circle>
+  <rect x="90" y="125" width="20" height="5" rx="2" fill="#0066CC"></rect>
+  <!-- Decorative accents -->
+  <circle cx="30" cy="150" r="6" fill="#FFD56B"></circle>
+  <circle cx="170" cy="50" r="8" fill="#FF6B6B"></circle>
+</svg>

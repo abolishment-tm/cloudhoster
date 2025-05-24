@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="backupGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38B2AC"/>
+      <stop offset="100%" stop-color="#4299E1"/>
+    </linearGradient>
+  </defs>
+  <path d="M64 8a56 56 0 1 0 56 56A56.063 56.063 0 0 0 64 8zm4 84H60V48h8z" fill="url(#backupGrad)"/>
+  <path d="M64 48v36l-18-18" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,95 @@
+/* src/components/DataCenterSection.css */
+
+.dc-section {
+  padding: 6rem 1rem;
+  background: #fff;
+  font-family: 'AvertaStd', sans-serif;
+}
+
+.dc-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.dc-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #1F2A38;
+  margin-bottom: 0.5rem;
+}
+
+.dc-subtitle {
+  font-size: 1.125rem;
+  font-weight: 300;
+  color: #475569;
+}
+
+.dc-map-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.dc-map {
+  width: 100%;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.1));
+  border-radius: 8px;
+}
+
+/* Marker container */
+.dc-marker {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  animation: fadeIn 0.8s ease both;
+}
+
+/* The pin dot */
+.dc-pin {
+  width: 16px;
+  height: 16px;
+  background: #7C3AED;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  position: relative;
+  z-index: 2;
+}
+
+/* Label box */
+.dc-label {
+  margin-top: 0.5rem;
+  background: rgba(124,62,237,0.1);
+  color: #7C3AED;
+  font-size: 0.875rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Connector line */
+.dc-line {
+  position: absolute;
+  width: 2px;
+  height: 1.5rem;
+  background: #7C3AED;
+  top: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.6;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -110%) scale(0.8); }
+  to   { opacity: 1; transform: translate(-50%, -100%) scale(1); }
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .dc-marker .dc-label {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+  }
+}

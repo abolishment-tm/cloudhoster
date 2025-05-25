@@ -5,190 +5,262 @@
   font-family: 'Inter', sans-serif;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
-.font-bold {
-  font-weight: 700;
-}
-
-.text-gray-900 {
-  color: #111827;
-}
-
-.text-gray-600 {
-  color: #4B5563;
-}
-
-.mb-4 {
-  margin-bottom: 1rem;
-}
-
-.mb-16 {
-  margin-bottom: 4rem;
-}
-
-.max-w-3xl {
-  max-width: 48rem;
-}
-
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.py-20 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.bg-gray-50 {
-  background-color: #F9FAFB;
-}
-
-.grid {
-  display: grid;
-}
-
-.gap-8 {
-  gap: 2rem;
-}
-
-.bg-white {
-  background-color: #FFFFFF;
-}
-
-.rounded-2xl {
-  border-radius: 1rem;
-}
-
-.shadow-lg {
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-
-.overflow-hidden {
+/* Data Center Section */
+.datacenter-section {
+  position: relative;
+  min-height: 500px;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
   overflow: hidden;
 }
 
-.transition-transform {
-  transition-property: transform;
+/* Organic Shapes */
+.organic-shape {
+  position: absolute;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+  backdrop-filter: blur(8px);
+  animation: morphing 20s ease-in-out infinite;
 }
 
-.duration-300 {
-  transition-duration: 300ms;
+.shape-1 {
+  width: 600px;
+  height: 600px;
+  top: -300px;
+  left: -200px;
+  animation-delay: 0s;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
 }
 
-.hover\:-translate-y-2:hover {
-  transform: translateY(-0.5rem);
+.shape-2 {
+  width: 500px;
+  height: 500px;
+  top: 20%;
+  right: -200px;
+  animation-delay: -5s;
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.2) 0%, rgba(234, 88, 12, 0.2) 100%);
 }
 
-.p-6 {
-  padding: 1.5rem;
+.shape-3 {
+  width: 400px;
+  height: 400px;
+  bottom: -200px;
+  left: 30%;
+  animation-delay: -10s;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(5, 150, 105, 0.2) 100%);
 }
 
-.bg-gradient-to-br {
-  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+/* Floating Clouds */
+.cloud {
+  position: absolute;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
 }
 
-.text-white {
+.cloud-1 {
+  width: 200px;
+  height: 100px;
+  top: 15%;
+  left: 10%;
+  animation: float 15s ease-in-out infinite;
+}
+
+.cloud-2 {
+  width: 150px;
+  height: 80px;
+  top: 40%;
+  right: 15%;
+  animation: float 12s ease-in-out infinite reverse;
+}
+
+.cloud-3 {
+  width: 180px;
+  height: 90px;
+  bottom: 20%;
+  left: 20%;
+  animation: float 18s ease-in-out infinite;
+}
+
+/* Ripple Effect */
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  animation: ripple 10s linear infinite;
+}
+
+.ripple-1 {
+  width: 300px;
+  height: 300px;
+  top: 20%;
+  left: 30%;
+  animation-delay: 0s;
+}
+
+.ripple-2 {
+  width: 400px;
+  height: 400px;
+  bottom: 10%;
+  right: 20%;
+  animation-delay: -3s;
+}
+
+.datacenter-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.datacenter-title {
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 62px;
   color: #FFFFFF;
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
-.mb-3 {
-  margin-bottom: 0.75rem;
-}
-
-.mb-6 {
   margin-bottom: 1.5rem;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.min-h-\[60px\] {
-  min-height: 60px;
+.datacenter-subtitle {
+  font-size: 24px;
+  line-height: 40px;
+  color: rgba(255,255,255,0.9);
+  text-align: center;
+  margin-bottom: 4rem;
 }
 
-.flex {
-  display: flex;
-}
-
-.items-baseline {
-  align-items: baseline;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.ml-2 {
-  margin-left: 0.5rem;
-}
-
-.w-full {
+.datacenter-map {
+  position: relative;
   width: 100%;
+  height: 400px;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 30px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  overflow: hidden;
 }
 
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+.datacenter-marker {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+.marker-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  transition: all 0.3s ease;
 }
 
-.rounded-lg {
-  border-radius: 0.5rem;
+.datacenter-marker:hover .marker-dot {
+  transform: scale(1.8);
+  animation: none;
+  filter: brightness(1.2);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
 }
 
-.transition-colors {
-  transition-property: background-color, border-color, color, fill, stroke;
+.datacenter-marker:hover .marker-label {
+  transform: translateX(-50%) scale(1.1);
+  text-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-.duration-200 {
-  transition-duration: 200ms;
+.marker-label {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 0.5rem;
+  white-space: nowrap;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 1rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
 }
 
-@media (min-width: 768px) {
-  .md\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+/* Marker Positions */
+.marker-jakarta { top: 75%; left: 56%; }
+.marker-singapore { top: 73%; left: 59%; }
+.marker-london { top: 34%; left: 48%; }
+.marker-washington { top: 45%; left: 25%; }
+.marker-newyork { top: 48%; left: 28%; }
+.marker-silicon { top: 54%; left: 21%; }
+.marker-dallas { top: 58%; left: 26%; }
+
+/* Marker Colors */
+.marker-jakarta .marker-dot { 
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF4757 100%);
+  box-shadow: 0 4px 15px rgba(255,107,107,0.3);
 }
 
-@media (min-width: 1024px) {
-  .lg\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
+.marker-singapore .marker-dot { 
+  background: linear-gradient(135deg, #4ECDC4 0%, #2BAE9F 100%);
+  box-shadow: 0 4px 15px rgba(78,205,196,0.3);
 }
+
+.marker-london .marker-dot { 
+  background: linear-gradient(135deg, #A8E6CF 0%, #7ED6B5 100%);
+  box-shadow: 0 4px 15px rgba(168,230,207,0.3);
+}
+
+.marker-washington .marker-dot { 
+  background: linear-gradient(135deg, #FED330 0%, #F7B731 100%);
+  box-shadow: 0 4px 15px rgba(254,211,48,0.3);
+}
+
+.marker-newyork .marker-dot { 
+  background: linear-gradient(135deg, #6B8DE3 0%, #8B5CF6 100%);
+  box-shadow: 0 4px 15px rgba(107,141,227,0.3);
+}
+
+.marker-silicon .marker-dot { 
+  background: linear-gradient(135deg, #FF9A8B 0%, #FF6B88 100%);
+  box-shadow: 0 4px 15px rgba(255,154,139,0.3);
+}
+
+.marker-dallas .marker-dot { 
+  background: linear-gradient(135deg, #00F2FE 0%, #4FACFE 100%);
+  box-shadow: 0 4px 15px rgba(0,242,254,0.3);
+}
+
+/* Animations */
+@keyframes morphing {
+  0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  25% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+  50% { border-radius: 40% 60% 30% 70% / 70% 30% 50% 40%; }
+  75% { border-radius: 60% 30% 70% 40% / 40% 70% 60% 30%; }
+  100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+@keyframes ripple {
+  0% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+/* Animation delays for markers */
+.marker-jakarta .marker-dot { animation-delay: 0s; }
+.marker-singapore .marker-dot { animation-delay: 0.3s; }
+.marker-london .marker-dot { animation-delay: 0.6s; }
+.marker-washington .marker-dot { animation-delay: 0.9s; }
+.marker-newyork .marker-dot { animation-delay: 1.2s; }
+.marker-silicon .marker-dot { animation-delay: 1.5s; }
+.marker-dallas .marker-dot { animation-delay: 1.8s; }

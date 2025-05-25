@@ -73,7 +73,7 @@ const HeroSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column – Illustration */}
+          {/* Right Column ï¿½ Illustration */}
           <div className="w-full lg:w-1/2 mt-12 lg:mt-0 relative min-h-[500px]">
             <div className="hero-illustration absolute inset-0">
               {/* semua ikon & animasi seperti semula */}

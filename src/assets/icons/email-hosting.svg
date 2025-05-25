@@ -1,18 +1,24 @@
-<!--?xml version="1.0" encoding="UTF-8"?-->
-<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background circle -->
-  <circle cx="100" cy="100" r="100" fill="url(#grad4)"></circle>
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="grad4" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#5DD39E"></stop>
-      <stop offset="100%" stop-color="#2BAE9F"></stop>
+    <!-- Envelope body gradient (soft sky → pastel blue) -->
+    <linearGradient id="gradEnv" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b3e5fc"></stop>
+      <stop offset="100%" stop-color="#81d4fa"></stop>
+    </linearGradient>
+    <!-- Envelope flap gradient (light mint → pale teal) -->
+    <linearGradient id="gradFlap" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#c8e6c9"></stop>
+      <stop offset="100%" stop-color="#a5d6a7"></stop>
     </linearGradient>
   </defs>
-  <!-- Email envelope illustration -->
-  <rect x="50" y="60" width="100" height="60" rx="8" fill="#FFFFFF" opacity="0.9"></rect>
-  <polyline points="50,60 100,100 150,60" fill="none" stroke="#2BAE9F" stroke-width="4"></polyline>
-  <line x1="50" y1="120" x2="150" y2="120" stroke="#2BAE9F" stroke-width="4"></line>
-  <!-- Decorative accents -->
-  <circle cx="30" cy="100" r="6" fill="#FF6B6B"></circle>
-  <circle cx="170" cy="80" r="8" fill="#FFD56B"></circle>
+
+  <!-- Envelope body -->
+  <rect x="16" y="36" width="96" height="56" rx="8" fill="url(#gradEnv)" stroke="rgba(0,0,0,0.05)" stroke-width="1"></rect>
+
+  <!-- Envelope flap -->
+  <polygon points="16,36 64,76 112,36" fill="url(#gradFlap)" stroke="rgba(0,0,0,0.05)" stroke-width="1"></polygon>
+
+  <!-- Accent: dotted arc -->
+  <path d="M40 84
+       a28 28 0 0 1 48 0" fill="none" stroke="#90caf9" stroke-width="2" stroke-dasharray="4,3"></path>
 </svg>

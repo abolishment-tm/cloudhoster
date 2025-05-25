@@ -1,0 +1,42 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background blob gradient (soft pink → light cream) -->
+    <linearGradient id="gradBG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8bbd0"></stop>
+      <stop offset="100%" stop-color="#fff8e1"></stop>
+    </linearGradient>
+    <!-- Lens glass gradient (pastel teal → mint) -->
+    <linearGradient id="gradLens" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#b2dfdb"></stop>
+      <stop offset="100%" stop-color="#c8e6c9"></stop>
+    </linearGradient>
+    <!-- Handle gradient (soft lavender → lilac) -->
+    <linearGradient id="gradHandle" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d1c4e9"></stop>
+      <stop offset="100%" stop-color="#ce93d8"></stop>
+    </linearGradient>
+    <!-- Accent gradient for dotted arc -->
+    <linearGradient id="gradAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffe082"></stop>
+      <stop offset="100%" stop-color="#ffd54f"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- Abstract background blob -->
+  <path d="M20,80 C35,20 93,20 108,80 Q64,110 20,80 Z" fill="url(#gradBG)" fill-opacity="0.3"></path>
+
+  <!-- Magnifying glass lens -->
+  <circle cx="64" cy="60" r="24" fill="url(#gradLens)" stroke="rgba(0,0,0,0.1)" stroke-width="2"></circle>
+
+  <!-- Magnifying glass handle -->
+  <rect x="82" y="78" width="6" height="32" rx="3" fill="url(#gradHandle)" transform="rotate(45 85 94)"></rect>
+
+  <!-- Pseudo-domain snippet: three small bars inside lens -->
+  <rect x="50" y="58" width="28" height="5" rx="2" fill="white" opacity="0.8"></rect>
+  <rect x="54" y="66" width="4" height="4" rx="1" fill="#90caf9"></rect>
+  <rect x="62" y="66" width="4" height="4" rx="1" fill="#ffab91"></rect>
+  <rect x="70" y="66" width="4" height="4" rx="1" fill="#a5d6a7"></rect>
+
+  <!-- Dotted arc accent -->
+  <path d="M32 32 a40 40 0 0 1 64 0" fill="none" stroke="url(#gradAccent)" stroke-width="2" stroke-dasharray="4,4"></path>
+</svg>

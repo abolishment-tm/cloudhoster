@@ -1,20 +1,34 @@
-<!--?xml version="1.0" encoding="UTF-8"?-->
-<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background circle -->
-  <circle cx="100" cy="100" r="100" fill="url(#grad2)"></circle>
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="grad2" x1="0" y1="1" x2="1" y2="0">
-      <stop offset="0%" stop-color="#3AB0FF"></stop>
-      <stop offset="100%" stop-color="#0066CC"></stop>
+    <!-- Monitor frame gradient -->
+    <linearGradient id="gradFrame" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f0f0f0"></stop>
+      <stop offset="100%" stop-color="#e0e0e0"></stop>
+    </linearGradient>
+    <!-- Screen background gradient -->
+    <linearGradient id="gradScreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d1c4e9"></stop>
+      <stop offset="100%" stop-color="#f8bbd0"></stop>
+    </linearGradient>
+    <!-- Accent gradient for dotted arc -->
+    <linearGradient id="gradAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b2dfdb"></stop>
+      <stop offset="100%" stop-color="#80cbc4"></stop>
     </linearGradient>
   </defs>
-  <!-- Webpage monitor illustration -->
-  <rect x="40" y="60" width="120" height="80" rx="10" fill="#FFFFFF" opacity="0.9"></rect>
-  <rect x="55" y="75" width="90" height="40" rx="4" fill="#0066CC"></rect>
-  <circle cx="80" cy="110" r="5" fill="#3AB0FF"></circle>
-  <circle cx="120" cy="110" r="5" fill="#3AB0FF"></circle>
-  <rect x="90" y="125" width="20" height="5" rx="2" fill="#0066CC"></rect>
-  <!-- Decorative accents -->
-  <circle cx="30" cy="150" r="6" fill="#FFD56B"></circle>
-  <circle cx="170" cy="50" r="8" fill="#FF6B6B"></circle>
+
+  <!-- Monitor frame -->
+  <rect x="18" y="30" width="92" height="68" rx="12" fill="url(#gradFrame)"></rect>
+
+  <!-- Screen -->
+  <rect x="26" y="38" width="76" height="52" rx="8" fill="url(#gradScreen)"></rect>
+
+  <!-- WordPress "W" logo -->
+  <text x="64" y="78" text-anchor="middle" font-family="Georgia, serif" font-size="36" font-weight="bold" fill="#424242" letter-spacing="2">
+    W
+  </text>
+
+  <!-- Dotted arc accent -->
+  <path d="M30 86
+       a38 38 0 0 1 68 0" fill="none" stroke="url(#gradAccent)" stroke-width="2" stroke-dasharray="3,3"></path>
 </svg>

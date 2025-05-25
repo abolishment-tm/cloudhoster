@@ -1,0 +1,43 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background blob gradient (cream → light blue) -->
+    <linearGradient id="gradBG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff8e1"></stop>
+      <stop offset="100%" stop-color="#e1f5fe"></stop>
+    </linearGradient>
+    <!-- Globe gradient (sky blue → pastel blue) -->
+    <linearGradient id="gradGlobe" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#b3e5fc"></stop>
+      <stop offset="100%" stop-color="#e1f5fe"></stop>
+    </linearGradient>
+    <!-- URL-bar gradient (mint → pale mint) -->
+    <linearGradient id="gradBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#dcedc8"></stop>
+      <stop offset="100%" stop-color="#c8e6c9"></stop>
+    </linearGradient>
+    <!-- Accent gradient (lavender → pink) -->
+    <linearGradient id="gradAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d1c4e9"></stop>
+      <stop offset="100%" stop-color="#f8bbd0"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- Soft abstract background blob -->
+  <path d="M20,80 C40,20 88,20 108,80 Q64,110 20,80 Z" fill="url(#gradBG)" fill-opacity="0.3"></path>
+
+  <!-- Globe -->
+  <circle cx="64" cy="52" r="28" fill="url(#gradGlobe)" stroke="rgba(0,0,0,0.05)" stroke-width="1"></circle>
+  <!-- Latitude lines -->
+  <ellipse cx="64" cy="52" rx="24" ry="8" fill="none" stroke="white" stroke-opacity="0.7" stroke-width="1"></ellipse>
+  <ellipse cx="64" cy="52" rx="16" ry="4" fill="none" stroke="white" stroke-opacity="0.7" stroke-width="1"></ellipse>
+  <!-- Longitude lines -->
+  <path d="M64 24 L64 80" fill="none" stroke="white" stroke-opacity="0.7" stroke-width="1"></path>
+  <path d="M48 52 A16 28 0 0 1 80 52" fill="none" stroke="white" stroke-opacity="0.7" stroke-width="1"></path>
+
+  <!-- URL-bar / domain tag -->
+  <rect x="24" y="92" width="80" height="16" rx="4" fill="url(#gradBar)"></rect>
+  <circle cx="28" cy="100" r="4" fill="white"></circle>
+
+  <!-- Dotted arc accent -->
+  <path d="M32 28 a36 36 0 0 1 64 0" fill="none" stroke="url(#gradAccent)" stroke-width="2" stroke-dasharray="3,3"></path>
+</svg>

@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
       contact: 'Kontak',
       terms: 'Ketentuan Layanan',
       privacy: 'Kebijakan Privasi',
-      copyright: '© 2025 CloudHoster Indonesia. Hak cipta dilindungi.',
+      copyright: '© 2025 CloudHoster Indonesia. All rights reserved.',
       tagline: 'Hosting untuk semua website',
       cloudLogin: 'Login Cloud',
       adminLogin: 'Login Admin'
@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
   const t = content[language];
 
   return (
-    <footer className="footer">
+    <footer className="footer font-[AvertaStd]">
       <div className="container">
         <div className="footer-content">
           {/* Logo + Payment Logos */}

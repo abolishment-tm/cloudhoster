@@ -31,7 +31,7 @@
 }
 
 .payment-methods img {
-  height: 27px;       /* 20px × 1.35 ˜ 27px, jadi 35% lebih besar */
+  height: 27px;       /* 20px ï¿½ 1.35 ï¿½ 27px, jadi 35% lebih besar */
   width: auto;
   opacity: 1;         /* tampil penuh */
   filter: none;       /* hapus grayscale/brightness */

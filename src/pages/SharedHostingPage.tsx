@@ -1,3 +1,4 @@
+// src/pages/SharedHostingPage.tsx
 import React, { useState } from 'react';
 import { Check, Server, Cloud, Shield, Zap, Database, Globe } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -9,7 +10,7 @@ const SharedHostingPage: React.FC = () => {
 
   const texts = {
     en: {
-      title: "Paket Hosting untuk Setiap Website",
+      title: "Hosting Plans for Every Website",
       description: "Experience lightning-fast hosting with 99.9% uptime guarantee and 24/7 expert support.",
       features: [
         { icon: Shield, text: "Free SSL Security" },
@@ -33,14 +34,14 @@ const SharedHostingPage: React.FC = () => {
   const t = texts[language];
 
   const periodLabels = {
-    triennially: 'Triennially',
-    annually: 'Annually',
-    monthly: 'Monthly'
+    triennially: language === 'id' ? '3 Tahunan' : 'Triennially',
+    annually: language === 'id' ? 'Tahunan' : 'Annually',
+    monthly: language === 'id' ? 'Bulanan' : 'Monthly'
   };
 
   const plans = {
-    starter: {
-      name: 'Starter',
+    personal: {
+      name: 'Personal',
       monthly: { price: '75.000', originalPrice: '150.000' },
       annually: { price: '52.000', originalPrice: '150.000' },
       triennially: { price: '35.000', originalPrice: '150.000' },
@@ -75,8 +76,8 @@ const SharedHostingPage: React.FC = () => {
         { value: '2x', label: 'More CPU & RAM' }
       ]
     },
-    turbo: {
-      name: 'Turbo',
+    super: {
+      name: 'Super',
       monthly: { price: '135.000', originalPrice: '300.000' },
       annually: { price: '97.000', originalPrice: '300.000' },
       triennially: { price: '67.000', originalPrice: '300.000' },
@@ -105,9 +106,9 @@ const SharedHostingPage: React.FC = () => {
 
   const getDiscount = (plan: any, period: string) => {
     const discounts = {
-      starter: { monthly: '50%', annually: '65%', triennially: '75%' },
+      personal: { monthly: '50%', annually: '65%', triennially: '75%' },
       pro: { monthly: '55%', annually: '70%', triennially: '78%' },
-      turbo: { monthly: '60%', annually: '75%', triennially: '77%' }
+      super: { monthly: '60%', annually: '75%', triennially: '77%' }
     };
     return discounts[plan][period];
   };
@@ -130,23 +131,14 @@ const SharedHostingPage: React.FC = () => {
               ))}
             </div>
           </div>
-          
           <div className="hero-illustration">
             <div className="server-icon">
-              <Server size={64} color="#FFFFFF" />
+              <Server size={64} color="#fff" />
             </div>
-            <div className="floating-icon icon-1">
-              <Globe size={32} />
-            </div>
-            <div className="floating-icon icon-2">
-              <Cloud size={32} />
-            </div>
-            <div className="floating-icon icon-3">
-              <Shield size={32} />
-            </div>
-            <div className="floating-icon icon-4">
-              <Database size={32} />
-            </div>
+            <div className="floating-icon icon-1"><Globe size={32} /></div>
+            <div className="floating-icon icon-2"><Cloud size={32} /></div>
+            <div className="floating-icon icon-3"><Shield size={32} /></div>
+            <div className="floating-icon icon-4"><Database size={32} /></div>
           </div>
         </div>
       </div>
@@ -180,37 +172,27 @@ const SharedHostingPage: React.FC = () => {
               </div>
 
               <div className="datacenter">
-                <span>Datacenter terdekat:</span>
+                <span>{language === 'id' ? 'Datacenter terdekat:' : 'Nearest Datacenter:'}</span>
                 <strong>Jakarta</strong>
-                <img src="https://raw.githubusercontent.com/lipis/flag-icons/main/flags/4x3/id.svg" alt="Indonesia Flag" />
+                <img src="https://raw.githubusercontent.com/lipis/flag-icons/main/flags/4x3/id.svg" alt="ID" />
               </div>
 
               <div className="features-section">
                 {plan.essentialFeatures.map((feature, index) => (
                   <div key={index} className="feature">
                     <Check size={16} />
-                    <span>
-                      <span className="feature-value">{feature.value}</span> {feature.label}
-                      {feature.label === 'SSL Certificate' && (
-                        <div className="powered-by">
-                          <span>Powered by</span>
-                          <img src="https://www.litespeedtech.com/images/logos/litespeed/litespeed-logo.svg" alt="LiteSpeed" />
-                        </div>
-                      )}
-                    </span>
+                    <span><span className="feature-value">{feature.value}</span> {feature.label}</span>
                   </div>
                 ))}
               </div>
 
               {plan.proFeatures && (
                 <div className="features-section pro">
-                  <h4>Pro features</h4>
+                  <h4>Pro Features</h4>
                   {plan.proFeatures.map((feature, index) => (
                     <div key={index} className="feature">
                       <Check size={16} />
-                      <span>
-                        <span className="feature-value">{feature.value}</span> {feature.label}
-                      </span>
+                      <span><span className="feature-value">{feature.value}</span> {feature.label}</span>
                     </div>
                   ))}
                 </div>
@@ -218,13 +200,11 @@ const SharedHostingPage: React.FC = () => {
 
               {plan.turboFeatures && (
                 <div className="features-section turbo">
-                  <h4>Turbo features</h4>
+                  <h4>Turbo Features</h4>
                   {plan.turboFeatures.map((feature, index) => (
                     <div key={index} className="feature">
                       <Check size={16} />
-                      <span>
-                        <span className="feature-value">{feature.value}</span> {feature.label}
-                      </span>
+                      <span><span className="feature-value">{feature.value}</span> {feature.label}</span>
                     </div>
                   ))}
                 </div>

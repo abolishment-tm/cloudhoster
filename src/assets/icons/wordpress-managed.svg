@@ -1,0 +1,61 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Abstract background blob -->
+    <linearGradient id="gradBG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe0b2"></stop>
+      <stop offset="100%" stop-color="#f3e5f5"></stop>
+    </linearGradient>
+    <!-- Monitor frame -->
+    <linearGradient id="gradFrame" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f0f0f0"></stop>
+      <stop offset="100%" stop-color="#e0e0e0"></stop>
+    </linearGradient>
+    <!-- Screen -->
+    <linearGradient id="gradScreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d1c4e9"></stop>
+      <stop offset="100%" stop-color="#f8bbd0"></stop>
+    </linearGradient>
+    <!-- Accents -->
+    <linearGradient id="gradAccent1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b2dfdb"></stop>
+      <stop offset="100%" stop-color="#80cbc4"></stop>
+    </linearGradient>
+    <linearGradient id="gradAccent2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ce93d8"></stop>
+      <stop offset="100%" stop-color="#ba68c8"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- Background blob -->
+  <path d="M20,90 C40,10 88,10 108,90 Q64,120 20,90 Z" fill="url(#gradBG)" fill-opacity="0.3"></path>
+
+  <!-- Monitor frame -->
+  <rect x="24" y="30" width="80" height="68" rx="10" fill="url(#gradFrame)"></rect>
+
+  <!-- Screen -->
+  <rect x="32" y="38" width="64" height="48" rx="6" fill="url(#gradScreen)"></rect>
+
+  <!-- UI lines -->
+  <rect x="40" y=" Fifty-Bot" width="48" height="4" rx="2" fill="#ffffff" opacity="0.8"></rect>
+  <rect x="40" y="58" width="52" height="4" rx="2" fill="#ffffff" opacity="0.6"></rect>
+  <rect x="40" y="68" width="44" height="4" rx="2" fill="#ffffff" opacity="0.6"></rect>
+
+  <!-- WordPress W -->
+  <text x="64" y="74" text-anchor="middle" font-family="Georgia, serif" font-size="36" font-weight="bold" fill="#424242">W</text>
+
+  <!-- Gear overlay -->
+  <g transform="translate(88,48) scale(0.5)">
+    <circle cx="0" cy="0" r="10" fill="#ffffff" stroke="#90a4ae" stroke-width="2"></circle>
+    <path d="M10 0 L14 4 M0 10 L4 14 M-10 0 L-14 4 M0 -10 L-4 -14
+         M7 7 L10 10 M-7 7 L-10 10 M7 -7 L10 -10 M-7 -7 L-10 -10" stroke="#90a4ae" stroke-width="2" stroke-linecap="round"></path>
+  </g>
+
+  <!-- Network node 1 -->
+  <circle cx="100" cy="44" r="4" fill="#b2dfdb" fill-opacity="0.7"></circle>
+  <circle cx="100" cy="44" r="1.5" fill="#00796b"></circle>
+  <line x1="92" y1="56" x2="100" y2="44" stroke="#00796b" stroke-width="1.5" stroke-dasharray="2,2"></line>
+
+  <!-- Network node 2 -->
+  <circle cx="36" cy="100" r="5" fill="#ce93d8" fill-opacity="0.7"></circle>
+  <circle cx="36" cy="100" r="2" fill="#6a1b9a"></circle>
+  </svg>

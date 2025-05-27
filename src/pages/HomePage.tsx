@@ -1,10 +1,8 @@
-// src/pages/HomePage.tsx
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Check, Shield, Cloud, Database, Cpu, Settings, Heart, Globe, Lock } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useContentStore } from '../stores/useContentStore';
-import HeroSection from '../components/Hero/HeroSection';
 import './HomePage.css';
 
 // Feature icons (Kenapa Pilih Kami)
@@ -23,9 +21,30 @@ const HomePage: React.FC = () => {
   const { language } = useLanguage();
   const { contents, fetchContents, loading } = useContentStore();
 
-  useEffect(() => {
-    fetchContents();
-  }, [fetchContents]);
+  const texts = {
+    en: {
+      titleLine1: 'Get Worry-Free',
+      titleLine2: 'Web Hosting',
+      startNow: 'Start Now',
+      moneyBack: '60 Days Money Back Guarantee',
+      bullets: [
+        '100% Cloud Platform Hosting',
+        'Tier-3 Premium Data Center in Multiple Locations',
+        '100% Fast support by our experts'
+      ]
+    },
+    id: {
+      titleLine1: 'Dapatkan Web Hosting',
+      titleLine2: 'Tanpa Khawatir',
+      startNow: 'Mulai Sekarang',
+      moneyBack: '60 Hari Garansi Uang Kembali',
+      bullets: [
+        '100% Cloud Platform Hosting',
+        'Tier-3 Premium Data Center di Multi-lokasi',
+        '100% Support cepat dengan ahlinya'
+      ]
+    }
+  };
 
   const getContent = (type: string, key: string) =>
     contents.find(c => c.type === type && c.key === key && c.language === language)?.value;
@@ -165,7 +184,93 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="home-page font-[AvertaStd]">
-      <HeroSection />
+      {/* Hero Section */}
+      <div className="hero-section">
+        <div className="container mx-auto px-4 py-32 relative z-10">
+          <div className="flex flex-col lg:flex-row items-center">
+            {/* Left Column */}
+            <div className="w-full lg:w-1/2 text-white relative z-20">
+              <h1 className="hero-title">
+                <span className="hero-title-line">{texts[language].titleLine1}</span>
+                <span className="hero-title-line">{texts[language].titleLine2}</span>
+              </h1>
+
+              {/* Bullet List */}
+              <ul className="hero-bullets">
+                {texts[language].bullets.map((item, i) => (
+                  <li key={i} className="hero-bullet">
+                    <Check className="w-6 h-6 text-green-500 flex-shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              {/* Buttons + Money-Back */}
+              <div className="hero-buttons">
+                <div className="flex flex-col">
+                  <a href="#" className="hero-button hero-button-primary">
+                    {texts[language].startNow}
+                  </a>
+                  <p className="money-back">{texts[language].moneyBack}</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column - Illustration */}
+            <div className="w-full lg:w-1/2 mt-12 lg:mt-0 relative min-h-[500px]">
+              {/* Floating Icons */}
+              <div className="floating-icons">
+                <div className="floating-icon icon-1">
+                  <Shield className="text-white" size={24} />
+                </div>
+                <div className="floating-icon icon-2">
+                  <Cloud className="text-white" size={24} />
+                </div>
+                <div className="floating-icon icon-3">
+                  <Database className="text-white" size={24} />
+                </div>
+                <div className="floating-icon icon-4">
+                  <Cpu className="text-white" size={24} />
+                </div>
+                <div className="floating-icon icon-5">
+                  <Settings className="text-white" size={24} />
+                </div>
+                <div className="floating-icon icon-6">
+                  <Heart className="text-white" size={24} />
+                </div>
+                <div className="floating-icon icon-7">
+                  <Globe className="text-white" size={24} />
+                </div>
+                <div className="floating-icon icon-8">
+                  <Lock className="text-white" size={24} />
+                </div>
+              </div>
+
+              {/* Moving Clouds */}
+              <div className="moving-clouds">
+                <div className="cloud cloud-1"></div>
+                <div className="cloud cloud-2"></div>
+                <div className="cloud cloud-3"></div>
+              </div>
+
+              {/* Diagonal Ripple Lines */}
+              <div className="diagonal-ripples">
+                <div className="diagonal-line"></div>
+                <div className="diagonal-line"></div>
+                <div className="diagonal-line"></div>
+                <div className="diagonal-line"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Wave */}
+        <div className="wave-bottom">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
+          </svg>
+        </div>
+      </div>
 
       {/* Kenapa Pilih Kami */}
       <section className="py-20 bg-white">

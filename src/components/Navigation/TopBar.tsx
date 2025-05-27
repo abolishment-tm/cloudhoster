@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { HelpCircle, MessageSquare, DollarSign, CreditCard } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import './TopBar.css';
@@ -7,6 +7,7 @@ import './TopBar.css';
 const TopBar: React.FC = () => {
   const { language, setLanguage } = useLanguage();
   const [currency, setCurrency] = React.useState<'IDR' | 'USD'>('IDR');
+  const location = useLocation();
   
   const toggleLanguage = () => {
     setLanguage(language === 'id' ? 'en' : 'id');
@@ -34,9 +35,10 @@ const TopBar: React.FC = () => {
   };
   
   const t = texts[language];
+  const isWordPressPage = location.pathname === '/managed-wordpress';
   
   return (
-    <div className="top-bar">
+    <div className={`top-bar ${isWordPressPage ? 'managed-wordpress' : ''}`}>
       <div className="container">
         <div className="top-bar-content">
           <div className="top-bar-left"></div>
@@ -83,4 +85,4 @@ const TopBar: React.FC = () => {
   );
 };
 
-export default TopBar;
+export default TopBar

@@ -1,7 +1,6 @@
-// src/components/Sections/DataCenterSection.tsx
 import React from 'react';
 import { useLanguage } from '../../contexts/LanguageContext';
-import WorldMap from '../../assets/icons/world-map-color.svg?url';
+import WorldMap from '../../assets/images/worldmap-pastel.png';
 
 const DataCenterSection: React.FC = () => {
   const { language } = useLanguage();

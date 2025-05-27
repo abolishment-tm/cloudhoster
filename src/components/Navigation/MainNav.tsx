@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { ShoppingCart, Menu, X, ChevronDown } from 'lucide-react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import Logo from '../Common/Logo';
@@ -19,6 +19,7 @@ const MainNav: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { language } = useLanguage();
+  const location = useLocation();
 
   const handleScroll = () => {
     setScrolled(window.scrollY > 50);
@@ -94,8 +95,11 @@ const MainNav: React.FC = () => {
 
   const t = texts[language];
 
+  const isWordPressPage = location.pathname === '/managed-wordpress';
+  const navClassName = `main-nav ${scrolled ? 'scrolled' : ''} ${isWordPressPage ? 'managed-wordpress' : ''}`;
+
   return (
-    <nav className={`main-nav ${scrolled ? 'scrolled' : ''}`}>
+    <nav className={navClassName}>
       <div className="container">
         <div className="nav-content">
           <Link to="/" className="nav-logo">

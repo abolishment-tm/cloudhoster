@@ -1,4 +1,3 @@
-// src/layouts/Footer.tsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -26,7 +25,7 @@ const Footer: React.FC = () => {
       contact: 'Contact',
       terms: 'Terms of Service',
       privacy: 'Privacy Policy',
-      copyright: '© 2025 CloudHoster Indonesia. All rights reserved.',
+      copyright: 'Â© 2025 CloudHoster Indonesia. All rights reserved.',
       tagline: 'Hosting for all websites',
       cloudLogin: 'Cloud Login',
       adminLogin: 'Admin Login'
@@ -41,7 +40,7 @@ const Footer: React.FC = () => {
       contact: 'Kontak',
       terms: 'Ketentuan Layanan',
       privacy: 'Kebijakan Privasi',
-      copyright: '© 2025 CloudHoster Indonesia. All rights reserved.',
+      copyright: 'Â© 2025 CloudHoster Indonesia. All rights reserved.',
       tagline: 'Hosting untuk semua website',
       cloudLogin: 'Login Cloud',
       adminLogin: 'Login Admin'
@@ -75,7 +74,7 @@ const Footer: React.FC = () => {
                 <li><Link to="/shared-hosting">Shared Hosting</Link></li>
                 <li><Link to="/cloud-dashboard">{t.cloudLogin}</Link></li>
                 <li><Link to="/email-hosting">Email Hosting</Link></li>
-                <li><Link to="/dedicated-server">Dedicated Server</Link></li>
+                <li><Link to="/dedicated-hosting">Dedicated Server</Link></li>
               </ul>
             </div>
             <div className="footer-column">
@@ -83,17 +82,13 @@ const Footer: React.FC = () => {
               <ul>
                 <li><Link to="/wordpress-hosting">WordPress Hosting</Link></li>
                 <li><Link to="/managed-wordpress">Managed WordPress</Link></li>
-                <li><Link to="/wordpress-security">WordPress Security</Link></li>
-                <li><Link to="/wordpress-speed">WordPress Speed</Link></li>
               </ul>
             </div>
             <div className="footer-column">
               <h4>{t.support}</h4>
               <ul>
-                <li><Link to="/support">{t.support}</Link></li>
-                <li><Link to="/about">{t.about}</Link></li>
+                <li><Link to="/pusat-bantuan">{t.support}</Link></li>
                 <li><Link to="/contact">{t.contact}</Link></li>
-                <li><Link to="/blog">Blog</Link></li>
               </ul>
             </div>
             <div className="footer-column">

@@ -5,6 +5,11 @@
   font-family: 'AvertaStd', var(--font-body);
 }
 
+/* Special color scheme for Managed WordPress page */
+.top-bar.managed-wordpress {
+  background: linear-gradient(135deg, #21759B 0%, #464342 100%);
+}
+
 .top-bar-content {
   display: flex;
   justify-content: space-between;

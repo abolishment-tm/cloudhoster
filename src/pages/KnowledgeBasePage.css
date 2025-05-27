@@ -13,19 +13,23 @@
 .kb-title {
   font-family: 'AvertaStd', sans-serif;
   font-weight: 800;
-  font-size: 50px;
-  line-height: 62px;
+  font-size: 36px;
+  line-height: 44px;
   letter-spacing: 0px;
-  color: #FFFFFF;
+  color: #6B4DC4;
   margin-bottom: 1.5rem;
 }
 
 .kb-subtitle {
-  font-size: 1.25rem;
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0px;
+  color: #524972;
   opacity: 0.9;
   max-width: 600px;
   margin: 0 auto 3rem;
-  color: #FFFFFF;
 }
 
 .kb-search {
@@ -89,13 +93,22 @@
 }
 
 .category-title {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: 0px;
+  color: #6B4DC4;
   margin-bottom: 1rem;
 }
 
 .category-description {
-  color: #64748b;
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0px;
+  color: #524972;
   margin-bottom: 1.5rem;
 }
 
@@ -107,7 +120,12 @@
 .article-link {
   display: block;
   padding: 0.75rem 0;
-  color: var(--primary);
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0px;
+  color: #524972;
   text-decoration: none;
   transition: all 0.3s ease;
   border-bottom: 1px solid #e2e8f0;
@@ -129,13 +147,22 @@
 }
 
 .contact-title {
-  font-size: 2rem;
-  font-weight: 700;
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: 0px;
+  color: #6B4DC4;
   margin-bottom: 1rem;
 }
 
 .contact-description {
-  color: #64748b;
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0px;
+  color: #524972;
   max-width: 600px;
   margin: 0 auto 3rem;
 }
@@ -173,13 +200,22 @@
 }
 
 .channel-title {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: 0px;
+  color: #6B4DC4;
   margin-bottom: 0.75rem;
 }
 
 .channel-description {
-  color: #64748b;
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0px;
+  color: #524972;
   margin-bottom: 1.5rem;
 }
 

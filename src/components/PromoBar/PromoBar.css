@@ -1,3 +1,4 @@
+/* PromoBar.css */
 .promo-bar {
   background: var(--secondary);
   color: var(--white);
@@ -5,13 +6,14 @@
   transition: all 0.3s ease-in-out;
   font-size: 0.875rem;
   position: relative;
+  z-index: 1000;
 }
 
 .promo-top-bar {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
   gap: 1rem;
   position: relative;
 }
@@ -89,109 +91,110 @@
   top: 100%;
   left: 0;
   right: 0;
-  background: rgba(108, 92, 231, 0.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  padding: 1.5rem;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  padding: 4rem 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  z-index: 50;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  min-height: 600px;
 }
 
 .promo-grid {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2.5rem;
 }
 
 .promo-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
-  padding: 1.5rem;
+  border-radius: 20px;
+  padding: 2.5rem;
   text-align: center;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  transform: translateY(0);
+  transition: all 0.3s ease;
+}
+
+.promo-card:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 .promo-card h3 {
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   font-weight: 700;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
   font-family: var(--font-heading);
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.8));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #ffffff;
 }
 
 .promo-card p {
   color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 1rem;
-  font-size: 0.875rem;
+  margin-bottom: 2rem;
+  font-size: 1.125rem;
   line-height: 1.6;
 }
 
 .promo-price {
   font-family: var(--font-heading);
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .promo-price .currency {
-  font-size: 1rem;
+  font-size: 1.5rem;
   vertical-align: top;
   position: relative;
-  top: 0.5rem;
+  top: 0.75rem;
   color: rgba(255, 255, 255, 0.9);
 }
 
 .promo-price .amount {
-  font-size: 2.5rem;
+  font-size: 4rem;
   font-weight: 700;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #ffffff;
 }
 
 .promo-price .period {
-  font-size: 0.875rem;
+  font-size: 1.25rem;
   opacity: 0.8;
 }
 
 .promo-feature {
   font-weight: 500;
   color: rgba(255, 255, 255, 0.9) !important;
-  font-size: 0.875rem !important;
+  font-size: 1.125rem !important;
+  margin-bottom: 0.75rem;
 }
 
 .promo-timer {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  margin-bottom: 0.75rem;
-  font-size: 0.75rem;
+  gap: 1rem;
+  margin: 2rem 0;
+  font-size: 1rem;
 }
 
 .promo-discount {
-  font-size: 0.75rem !important;
+  font-size: 1rem !important;
   opacity: 0.8;
+  margin-bottom: 2rem;
 }
 
 .promo-cta {
   background: linear-gradient(135deg, rgba(255, 138, 0, 0.9), rgba(255, 94, 98, 0.9));
   color: var(--white);
   border: none;
-  padding: 0.5rem 1.5rem;
-  border-radius: 6px;
+  padding: 1rem 2.5rem;
+  border-radius: 12px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   width: 100%;
-  font-size: 0.875rem;
+  font-size: 1.125rem;
   position: relative;
   overflow: hidden;
 }
@@ -216,11 +219,16 @@
   left: 100%;
 }
 
+.promo-cta:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, rgba(255, 138, 0, 1), rgba(255, 94, 98, 1));
+}
+
 @media (max-width: 768px) {
   .promo-top-bar {
     flex-direction: column;
-    padding: 0.75rem;
-    gap: 0.5rem;
+    padding: 1rem;
+    gap: 0.75rem;
     text-align: center;
   }
   
@@ -229,15 +237,15 @@
   }
   
   .promo-details {
-    padding: 1rem;
+    padding: 2rem 1rem;
   }
   
   .promo-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
   }
   
   .promo-card {
-    padding: 1rem;
+    padding: 1.5rem;
   }
 }

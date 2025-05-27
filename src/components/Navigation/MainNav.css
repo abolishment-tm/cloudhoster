@@ -4,6 +4,11 @@
   transition: all 0.3s ease;
 }
 
+/* Special color scheme for Managed WordPress page */
+.main-nav.managed-wordpress {
+  background: linear-gradient(135deg, #21759B 0%, #464342 100%);
+}
+
 .nav-content {
   display: flex;
   align-items: center;
@@ -245,21 +250,23 @@ li:nth-child(4) .mega-menu-item:nth-child(3) .mega-menu-icon {
 }
 
 .btn-primary {
-  background: var(--secondary);
-  color: var(--white);
-  padding: 0.75rem 2rem;
-  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  color: #CEC9DF;
   font-family: 'AvertaStd', var(--font-body);
   font-weight: 600;
-  font-size: 16px;
-  line-height: 26px;
+  font-size: 20px;
+  line-height: 32px;
   letter-spacing: 0px;
-  transition: all 0.3s ease;
+  padding: 0.5rem;
+  transition: color 0.3s ease;
+  background: transparent;
+  border: none;
 }
 
 .btn-primary:hover {
+  color: var(--white);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 138, 80, 0.3);
 }
 
 .cart-icon {

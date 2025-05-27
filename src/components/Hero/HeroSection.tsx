@@ -10,136 +10,128 @@ import {
   Wifi,
   Lock,
   BarChart,
-  Check
+  Check,
+  Settings,
+  Heart
 } from 'lucide-react';
-import { useLanguage } from '../../contexts/LanguageContext';
 import './HeroSection.css';
 
-const HeroSection: React.FC = () => {
-  const { language } = useLanguage();
+interface HeroSectionProps {
+  titleLine1: string;
+  titleLine2: string;
+  startNow: string;
+  moneyBack: string;
+  bullets?: string[];
+  customIcons?: React.ReactNode;
+  customBackground?: string;
+}
 
-  const texts = {
-    en: {
-      title: 'Get Worry-Free Web Hosting',
-      startNow: 'Start Now',
-      moneyBack: '60 Days Money Back Guarantee',
-      bullets: [
-        '100% Cloud Platform Hosting',
-        'Tier-3 Premium Data Center di Multi-lokasi',
-        '100% Fast support by our experts'
-      ]
-    },
-    id: {
-      title: 'Dapatkan Web Hosting Tanpa Khawatir',
-      startNow: 'Mulai Sekarang',
-      moneyBack: '60 Hari Garansi Uang Kembali',
-      bullets: [
-        '100% Cloud Platform Hosting',
-        'Tier-3 Premium Data Center di Multi-lokasi',
-        '100% Support cepat dengan ahlinya'
-      ]
-    }
-  };
-
-  const t = texts[language];
-
+const HeroSection: React.FC<HeroSectionProps> = ({
+  titleLine1,
+  titleLine2,
+  startNow,
+  moneyBack,
+  bullets = [], // Provide default empty array
+  customIcons,
+  customBackground
+}) => {
   return (
-    <div className="relative bg-gradient-to-br from-primary to-primary-light overflow-hidden">
+    <div className="hero-section\" style={customBackground ? { background: customBackground } : undefined}>
+      {/* Add animated circles */}
+      <div className="animated-circles">
+        <div className="circle circle-1"></div>
+        <div className="circle circle-2"></div>
+        <div className="circle circle-3"></div>
+      </div>
+
       <div className="container mx-auto px-4 py-32 relative z-10">
         <div className="flex flex-col lg:flex-row items-center">
           {/* Left Column */}
           <div className="w-full lg:w-1/2 text-white relative z-20">
-            {/* Title */}
-            <h1 className="hero-title">{t.title}</h1>
+            <h1 className="hero-title">
+              <span className="hero-title-line">{titleLine1}</span>
+              <span className="hero-title-line">{titleLine2}</span>
+            </h1>
 
-            {/* New: Bullet List */}
-            <ul className="hero-bullets">
-              {t.bullets.map((item, i) => (
-                <li key={i} className="hero-bullet">
-                  <Check className="w-6 h-6 text-green-500 flex-shrink-0" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
+            {/* Bullet List */}
+            {bullets && bullets.length > 0 && (
+              <ul className="hero-bullets">
+                {bullets.map((item, i) => (
+                  <li key={i} className="hero-bullet">
+                    <Check className="w-6 h-6 text-green-500 flex-shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
 
             {/* Buttons + Money-Back */}
             <div className="hero-buttons">
               <div className="flex flex-col">
                 <a href="#" className="hero-button hero-button-primary">
-                  {t.startNow}
+                  {startNow}
                 </a>
-                <p className="money-back">{t.moneyBack}</p>
+                <p className="money-back">{moneyBack}</p>
               </div>
             </div>
           </div>
 
-          {/* Right Column � Illustration */}
+          {/* Right Column - Illustration */}
           <div className="w-full lg:w-1/2 mt-12 lg:mt-0 relative min-h-[500px]">
-            <div className="hero-illustration absolute inset-0">
-              {/* semua ikon & animasi seperti semula */}
-              <div className="icon-container icon-server animate-float">
-                <Server className="icon" size={48} />
-              </div>
-              <div className="icon-container icon-database animate-float-delay">
-                <Database className="icon" size={40} />
-              </div>
-              <div className="icon-container icon-globe animate-float-slow">
-                <Globe className="icon" size={44} />
-              </div>
-              <div className="icon-container icon-shield animate-float">
-                <Shield className="icon" size={36} />
-              </div>
-              <div className="icon-container icon-cloud animate-float-delay">
-                <Cloud className="icon" size={42} />
-              </div>
-              <div className="icon-container icon-speed animate-float-slow">
-                <Zap className="icon" size={38} />
-              </div>
-              <div className="icon-container icon-cpu animate-float">
-                <Cpu className="icon" size={34} />
-              </div>
-              <div className="icon-container icon-wifi animate-float-delay">
-                <Wifi className="icon" size={36} />
-              </div>
-              <div className="icon-container icon-lock animate-float-slow">
-                <Lock className="icon" size={32} />
-              </div>
-              <div className="icon-container icon-chart animate-float">
-                <BarChart className="icon" size={34} />
-              </div>
-              {/* connection lines, circles, pulses */}
-              <div className="connection-lines">
-                <div className="line line-1" />
-                <div className="line line-2" />
-                <div className="line line-3" />
-              </div>
-              <div className="decorative-circles">
-                <div className="circle circle-1" />
-                <div className="circle circle-2" />
-                <div className="circle circle-3" />
-              </div>
-              <div className="pulse-effects">
-                <div className="pulse pulse-1" />
-                <div className="pulse pulse-2" />
-                <div className="pulse pulse-3" />
-              </div>
+            {customIcons || (
+              <>
+                {/* Default floating icons */}
+                <div className="floating-icons">
+                  <div className="floating-icon icon-1">
+                    <Shield className="text-white" size={24} />
+                  </div>
+                  <div className="floating-icon icon-2">
+                    <Cloud className="text-white" size={24} />
+                  </div>
+                  <div className="floating-icon icon-3">
+                    <Database className="text-white" size={24} />
+                  </div>
+                  <div className="floating-icon icon-4">
+                    <Cpu className="text-white" size={24} />
+                  </div>
+                  <div className="floating-icon icon-5">
+                    <Settings className="text-white" size={24} />
+                  </div>
+                  <div className="floating-icon icon-6">
+                    <Heart className="text-white" size={24} />
+                  </div>
+                  <div className="floating-icon icon-7">
+                    <Globe className="text-white" size={24} />
+                  </div>
+                  <div className="floating-icon icon-8">
+                    <Lock className="text-white" size={24} />
+                  </div>
+                </div>
+              </>
+            )}
+
+            {/* Moving Clouds */}
+            <div className="moving-clouds">
+              <div className="cloud cloud-1"></div>
+              <div className="cloud cloud-2"></div>
+              <div className="cloud cloud-3"></div>
+            </div>
+
+            {/* Diagonal Ripple Lines */}
+            <div className="diagonal-ripples">
+              <div className="diagonal-line"></div>
+              <div className="diagonal-line"></div>
+              <div className="diagonal-line"></div>
+              <div className="diagonal-line"></div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Background Waves */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="wave-shape" />
-        <div className="wave-shape-2" />
-      </div>
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden">
-        <svg viewBox="0 0 1440 320" className="wave-bottom" preserveAspectRatio="none">
-          <path
-            fill="currentColor"
-            fillOpacity="0.1"
-            d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-          />
+      {/* Bottom Wave */}
+      <div className="wave-bottom">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="shape-fill"></path>
         </svg>
       </div>
     </div>

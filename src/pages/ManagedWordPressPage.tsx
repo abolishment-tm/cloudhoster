@@ -15,32 +15,36 @@ import {
   Heart
 } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
-import './EmailHostingPage.css';
+import './ManagedWordPressPage.css';
 
-const EmailHostingPage: React.FC = () => {
+const ManagedWordPressPage: React.FC = () => {
   const { language } = useLanguage();
 
   const texts = {
     en: {
-      titleLine1: 'Professional',
-      titleLine2: 'Email Hosting',
+      titleLine1: 'Managed WordPress',
+      titleLine2: 'Made Simple',
       startNow: 'Start Now',
-      moneyBack: '60 Days Money Back Guarantee',
+      moneyBack: '30-Day Money Back Guarantee',
       bullets: [
-        'Enterprise-grade Email Platform',
-        'Advanced Spam & Virus Protection',
-        '99.9% Uptime Guarantee'
+        'Automated WordPress Updates',
+        'Daily Security Scans',
+        'Expert WordPress Support',
+        'Advanced Caching',
+        'Free SSL Certificates'
       ]
     },
     id: {
-      titleLine1: 'Email Hosting',
-      titleLine2: 'Profesional',
+      titleLine1: 'WordPress Terkelola',
+      titleLine2: 'Lebih Mudah',
       startNow: 'Mulai Sekarang',
-      moneyBack: '60 Hari Garansi Uang Kembali',
+      moneyBack: 'Jaminan Uang Kembali 30 Hari',
       bullets: [
-        'Platform Email Kelas Enterprise',
-        'Proteksi Spam & Virus Canggih',
-        'Jaminan Uptime 99.9%'
+        'Update WordPress Otomatis',
+        'Pemindaian Keamanan Harian',
+        'Dukungan WordPress Ahli',
+        'Caching Tingkat Lanjut',
+        'Sertifikat SSL Gratis'
       ]
     }
   };
@@ -48,7 +52,7 @@ const EmailHostingPage: React.FC = () => {
   const t = texts[language];
 
   return (
-    <div className="email-hosting-page">
+    <div className="managed-wordpress-page">
       <div className="hero-section">
         <div className="container mx-auto px-4 py-32 relative z-10">
           <div className="flex flex-col lg:flex-row items-center">
@@ -139,4 +143,4 @@ const EmailHostingPage: React.FC = () => {
   );
 };
 
-export default EmailHostingPage;
+export default ManagedWordPressPage;

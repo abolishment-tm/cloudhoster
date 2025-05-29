@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import './SharedHostingPage.css';
+import SharedHostingFAQ from '../components/SharedHostingFAQ';
 
 const SharedHostingPage: React.FC = () => {
   const { language } = useLanguage();
@@ -233,50 +234,51 @@ const SharedHostingPage: React.FC = () => {
       </div>
 
       <div className="pricing-section -mt-64">
-        <div className="pricing-tables">
-          {Object.entries(plans).map(([key, plan]) => (
-            <div key={key} className={`pricing-table ${plan.featured ? 'featured' : ''}`}>
-              {plan.featured && (
-                <div className="featured-badge">
-                  {language === 'id' ? 'Paling Populer' : 'Most Popular'}
-                </div>
-              )}
-              <div className="plan-header">
-                <h3 className="plan-name">{plan.name}</h3>
-                <div className="plan-price">
-                  <span className="currency">{language === 'id' ? 'Rp ' : '$'}</span>
-                  {language === 'id' ? plan.price : plan.priceUsd}
-                  <span className="period">/{language === 'id' ? 'bln' : 'mo'}</span>
-                </div>
-                <div className="original-price">
-                  {language === 'id' ? 'Rp ' : '$'}{language === 'id' ? plan.originalPrice : plan.originalPriceUsd}
-                </div>
-                <div className="discount">
-                  Save 75%
-                </div>
-              </div>
-
-              <ul className="features-list">
-                {plan.features.map((feature, index) => (
-                  <li key={index} className="feature-item">
-                    <Check size={16} />
-                    <span>
-                      <span className="feature-value">{feature.value}</span>
-                      {' '}{feature.label}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-
-              <button className="order-button">
-                {language === 'id' ? 'Pilih Paket' : 'Choose Plan'}
-              </button>
-            </div>
-          ))}
+  <div className="pricing-tables">
+    {Object.entries(plans).map(([key, plan]) => (
+      <div key={key} className={`pricing-table ${plan.featured ? 'featured' : ''}`}>
+        {plan.featured && (
+          <div className="featured-badge">
+            {language === 'id' ? 'Paling Populer' : 'Most Popular'}
+          </div>
+        )}
+        <div className="plan-header">
+          <h3 className="plan-name">{plan.name}</h3>
+          <div className="plan-price">
+            <span className="currency">{language === 'id' ? 'Rp ' : '$'}</span>
+            {language === 'id' ? plan.price : plan.priceUsd}
+            <span className="period">/{language === 'id' ? 'bln' : 'mo'}</span>
+          </div>
+          <div className="original-price">
+            {language === 'id' ? 'Rp ' : '$'}{language === 'id' ? plan.originalPrice : plan.originalPriceUsd}
+          </div>
+          <div className="discount">
+            Save 75%
+          </div>
         </div>
+        <ul className="features-list">
+          {plan.features.map((feature, index) => (
+            <li key={index} className="feature-item">
+              <Check size={16} />
+              <span>
+                <span className="feature-value">{feature.value}</span>
+                {' '}{feature.label}
+              </span>
+            </li>
+          ))}
+        </ul>
+        <button className="order-button">
+          {language === 'id' ? 'Pilih Paket' : 'Choose Plan'}
+        </button>
       </div>
-    </div>
-  );
+    ))}
+  </div>
+
+  {/* FAQ Section berada di luar grid pricing-table */}
+  <SharedHostingFAQ />
+</div>
+</div>
+);
 };
 
 export default SharedHostingPage;

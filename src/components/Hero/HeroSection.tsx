@@ -48,10 +48,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         <div className="flex flex-col lg:flex-row items-center">
           {/* Left Column */}
           <div className="w-full lg:w-1/2 text-white relative z-20">
-            <h1 className="hero-title">
-              <span className="hero-title-line">{titleLine1}</span>
-              <span className="hero-title-line">{titleLine2}</span>
-            </h1>
+            <h1 className="hero-title">{titleLine1} {titleLine2}</h1>                            
 
             {/* Bullet List */}
             {bullets && bullets.length > 0 && (

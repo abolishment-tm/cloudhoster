@@ -16,6 +16,7 @@ import TermsPage from './pages/LegalPages/TermsPage';
 import PrivacyPage from './pages/LegalPages/PrivacyPage';
 import GDPRPage from './pages/LegalPages/GDPRPage';
 import LoginPage from './pages/LoginPage';
+import './styles/global.css';
 import CloudDashboardPage from './pages/CloudDashboardPage';
 import AdminDashboardPage from './pages/AdminDashboardPage';
 import { AuthProvider } from './contexts/AuthContext';

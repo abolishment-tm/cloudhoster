@@ -1,144 +1,37 @@
-/* Logo Container */
 .logo {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
   transition: all 0.3s ease;
 }
 
-/* Icon Container */
 .logo-icon {
-  position: relative;
-  transition: transform 0.3s ease;
-}
-
-/* Cloud Icon Styling */
-.cloud-wrapper {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-/* Light variant (default) */
-.logo.light .cloud-main {
-  color: rgba(255, 255, 255, 0.95);
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-}
-
-.logo.light .cloud-accent {
-  color: rgba(255, 255, 255, 0.7);
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-}
-
-.logo.light .logo-brand {
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.95),
-    rgba(255, 255, 255, 0.8)
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  height: 100%;
 }
 
 .logo.light .logo-tagline {
-  background: linear-gradient(
-    to right,
-    var(--secondary-light),
-    var(--secondary)
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Dark variant */
-.logo.dark .cloud-main {
-  color: var(--primary);
-  filter: drop-shadow(0 2px 4px rgba(108, 92, 231, 0.2));
-}
-
-.logo.dark .cloud-accent {
-  color: var(--primary-light);
-  filter: drop-shadow(0 2px 4px rgba(108, 92, 231, 0.2));
-}
-
-.logo.dark .logo-brand {
-  background: linear-gradient(
-    to right,
-    var(--primary),
-    var(--primary-dark)
-  );
+  background: linear-gradient(to right, var(--secondary-light), var(--secondary));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .logo.dark .logo-tagline {
-  background: linear-gradient(
-    to right,
-    var(--secondary),
-    var(--secondary-dark)
-  );
+  background: linear-gradient(to right, var(--secondary), var(--secondary-dark));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.cloud-main,
-.cloud-accent {
-  position: absolute;
-  transition: all 0.3s ease;
-}
-
-.cloud-accent {
-  top: 40%;
-  left: 30%;
-}
-
-/* Text Container */
 .logo-text {
   display: flex;
   flex-direction: column;
   transition: all 0.3s ease;
 }
 
-/* Brand Container */
-.logo-brand-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-/* Brand Name */
-.logo-brand {
-  font-family: var(--font-heading);
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  line-height: 1;
-  transition: all 0.3s ease;
-  position: relative;
-  display: inline-block;
-}
-
-.logo-brand::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.95),
-    rgba(255, 255, 255, 0)
-  );
-  transition: width 0.3s ease;
-  opacity: 0;
-}
-
-/* Tagline */
 .logo-tagline {
   font-family: var(--font-heading);
   font-size: 0.75em;
@@ -149,37 +42,10 @@
   text-transform: uppercase;
 }
 
-/* Hover Animations */
 .logo:hover .logo-icon {
   transform: translateY(-2px);
 }
 
-.logo:hover .cloud-main {
-  transform: scale(1.05);
-}
-
-.logo:hover .cloud-accent {
-  transform: translate(2px, -2px) scale(1.1);
-}
-
-.logo:hover .logo-brand::after {
-  width: 100%;
-  opacity: 1;
-}
-
 .logo:hover .logo-tagline {
   transform: translateX(4px);
-}
-
-/* Size Variations */
-.logo.small .logo-brand {
-  font-size: 1.25rem;
-}
-
-.logo.medium .logo-brand {
-  font-size: 1.75rem;
-}
-
-.logo.large .logo-brand {
-  font-size: 2.25rem;
 }

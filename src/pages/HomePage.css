@@ -264,3 +264,22 @@
 .marker-newyork .marker-dot { animation-delay: 1.2s; }
 .marker-silicon .marker-dot { animation-delay: 1.5s; }
 .marker-dallas .marker-dot { animation-delay: 1.8s; }
+
+.section-title-hosting {
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 800; /* ExtraBold */
+  font-size: 50px;
+  line-height: 62px;
+  color: #2B1F51;
+  letter-spacing: 0px;
+}
+
+.section-subtitle {
+  font-size: 24px;
+  line-height: 40px;
+  color: #524972;
+  font-weight: 300;
+  max-width: 720px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}

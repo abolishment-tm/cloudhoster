@@ -1,10 +1,16 @@
 .main-nav {
   background: var(--primary);
-  padding: 1rem 0;
+  padding: 0.25rem 0; /* sempitkan padding agar lebih dekat ke TopBar */
+  margin-top: 0 !important;
   transition: all 0.3s ease;
 }
 
-/* Special color scheme for Managed WordPress page */
+/* TopBar + MainNav menyatu tanpa jarak */
+.top-bar + .main-nav {
+  margin-top: 0 !important;
+}
+
+/* Warna khusus untuk halaman Managed WordPress */
 .main-nav.managed-wordpress {
   background: linear-gradient(135deg, #21759B 0%, #464342 100%);
 }
@@ -12,11 +18,18 @@
 .nav-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
+  gap: 2rem;
+  min-height: 56px; /* ketinggian minimum navbar */
 }
 
 .nav-logo {
   z-index: 100;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-top: 2px; /* naikkan logo sedikit */
 }
 
 .menu-toggle {
@@ -40,7 +53,7 @@
 
 .nav-item {
   position: relative;
-  margin: 0 1rem;
+  margin: 0 0.5rem;
 }
 
 .nav-link {
@@ -49,10 +62,9 @@
   color: #CEC9DF;
   font-family: 'AvertaStd', var(--font-body);
   font-weight: 600;
-  font-size: 20px;
-  line-height: 32px;
-  letter-spacing: 0px;
-  padding: 0.5rem;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0.35rem 0.6rem;
   border: none;
   background: transparent;
   cursor: pointer;
@@ -60,7 +72,9 @@
 }
 
 .nav-link:hover {
-  color: var(--white);
+  color: inherit;
+  background-color: transparent;
+  cursor: default;
 }
 
 .nav-link svg {
@@ -78,105 +92,37 @@
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 0;
-  background-color: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   padding: 1.5rem;
+  width: 480px;
+  max-width: 90vw;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(10px);
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   z-index: 10;
 }
 
-.mega-menu {
-  width: 720px;
-  left: -100px;
+.dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 40px;
+  width: 16px;
+  height: 16px;
+  background: white;
+  transform: rotate(45deg);
+  box-shadow: -2px -2px 4px rgba(0, 0, 0, 0.05);
+  z-index: -1;
 }
 
 .mega-menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-}
-
-.mega-menu-item {
-  display: flex;
-  align-items: flex-start;
-  padding: 1.25rem;
-  border-radius: 12px;
-  transition: all 0.3s ease;
-  color: var(--dark-gray);
-  background-color: rgba(248, 249, 250, 0.8);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-}
-
-.mega-menu-item:hover {
-  background: var(--primary);
-  color: var(--white);
-  transform: translateY(-2px);
-}
-
-/* Hosting Menu - Modern Gradients */
-.mega-menu-item:nth-child(1) .mega-menu-icon {
-  background: linear-gradient(135deg, #FF6B6B 0%, #FF4757 100%);
-  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
-}
-
-.mega-menu-item:nth-child(2) .mega-menu-icon {
-  background: linear-gradient(135deg, #0BA360 0%, #3CBA92 100%);
-  box-shadow: 0 4px 15px rgba(11, 163, 96, 0.3);
-}
-
-.mega-menu-item:nth-child(3) .mega-menu-icon {
-  background: linear-gradient(135deg, #F6D365 0%, #FDA085 100%);
-  box-shadow: 0 4px 15px rgba(246, 211, 101, 0.3);
-}
-
-.mega-menu-item:nth-child(4) .mega-menu-icon {
-  background: linear-gradient(135deg, #6B8DE3 0%, #8B5CF6 100%);
-  box-shadow: 0 4px 15px rgba(107, 141, 227, 0.3);
-}
-
-/* WordPress Menu - Creative Gradients */
-li:nth-child(2) .mega-menu-item:nth-child(1) .mega-menu-icon {
-  background: linear-gradient(135deg, #764ABC 0%, #9B6DFF 100%);
-  box-shadow: 0 4px 15px rgba(118, 74, 188, 0.3);
-}
-
-li:nth-child(2) .mega-menu-item:nth-child(2) .mega-menu-icon {
-  background: linear-gradient(135deg, #00C4CC 0%, #00F2FE 100%);
-  box-shadow: 0 4px 15px rgba(0, 196, 204, 0.3);
-}
-
-li:nth-child(2) .mega-menu-item:nth-child(3) .mega-menu-icon {
-  background: linear-gradient(135deg, #FF4088 0%, #FF9A8B 100%);
-  box-shadow: 0 4px 15px rgba(255, 64, 136, 0.3);
-}
-
-li:nth-child(2) .mega-menu-item:nth-child(4) .mega-menu-icon {
-  background: linear-gradient(135deg, #7048E8 0%, #A558E6 100%);
-  box-shadow: 0 4px 15px rgba(112, 72, 232, 0.3);
-}
-
-/* Domain Menu - Vibrant Gradients */
-li:nth-child(4) .mega-menu-item:nth-child(1) .mega-menu-icon {
-  background: linear-gradient(135deg, #FF9A9E 0%, #FF5757 100%);
-  box-shadow: 0 4px 15px rgba(255, 154, 158, 0.3);
-}
-
-li:nth-child(4) .mega-menu-item:nth-child(2) .mega-menu-icon {
-  background: linear-gradient(135deg, #A6C1EE 0%, #5B8BF7 100%);
-  box-shadow: 0 4px 15px rgba(166, 193, 238, 0.3);
-}
-
-li:nth-child(4) .mega-menu-item:nth-child(3) .mega-menu-icon {
-  background: linear-gradient(135deg, #84FAB0 0%, #00CC88 100%);
-  box-shadow: 0 4px 15px rgba(132, 250, 176, 0.3);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
 }
 
 .mega-menu-icon {
@@ -191,6 +137,7 @@ li:nth-child(4) .mega-menu-item:nth-child(3) .mega-menu-icon {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  background: transparent;
 }
 
 .mega-menu-icon::before {
@@ -215,6 +162,18 @@ li:nth-child(4) .mega-menu-item:nth-child(3) .mega-menu-icon {
   z-index: 1;
 }
 
+.mega-menu-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.mega-menu-item:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+  transform: none;
+  color: inherit;
+}
+
 .mega-menu-item:hover .mega-menu-icon {
   background: var(--white) !important;
   color: var(--primary);
@@ -226,21 +185,26 @@ li:nth-child(4) .mega-menu-item:nth-child(3) .mega-menu-icon {
 }
 
 .mega-menu-content h3 {
-  font-size: 1.25rem;
+  font-family: 'AvertaStd', sans-serif;
   font-weight: 600;
-  margin-bottom: 0.5rem;
-  font-family: var(--font-heading);
+  font-size: 18px;
+  line-height: 30px;
+  color: #52399E;
+  margin-bottom: 0.25rem;
 }
 
 .mega-menu-content p {
-  font-size: 1rem;
-  line-height: 1.5;
-  opacity: 0.9;
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+  color: #524972;
+  margin: 0;
 }
 
 .mega-menu-item:hover .mega-menu-content p {
-  color: var(--white);
-  opacity: 0.9;
+  color: inherit;
+  opacity: 1;
 }
 
 .nav-actions {
@@ -255,13 +219,12 @@ li:nth-child(4) .mega-menu-item:nth-child(3) .mega-menu-icon {
   color: #CEC9DF;
   font-family: 'AvertaStd', var(--font-body);
   font-weight: 600;
-  font-size: 20px;
-  line-height: 32px;
-  letter-spacing: 0px;
-  padding: 0.5rem;
-  transition: color 0.3s ease;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0.35rem 0.75rem;
   background: transparent;
   border: none;
+  transition: color 0.3s ease;
 }
 
 .btn-primary:hover {
@@ -275,8 +238,8 @@ li:nth-child(4) .mega-menu-item:nth-child(3) .mega-menu-icon {
   align-items: center;
   justify-content: center;
   color: #CEC9DF;
-  transition: color 0.3s ease;
   font-size: 1.125rem;
+  transition: color 0.3s ease;
 }
 
 .cart-icon svg {
@@ -303,11 +266,12 @@ li:nth-child(4) .mega-menu-item:nth-child(3) .mega-menu-icon {
   justify-content: center;
 }
 
+/* Responsive tweaks */
 @media (max-width: 992px) {
   .menu-toggle {
     display: flex;
   }
-  
+
   .nav-menu,
   .nav-actions {
     position: fixed;
@@ -324,24 +288,24 @@ li:nth-child(4) .mega-menu-item:nth-child(3) .mega-menu-icon {
     z-index: 90;
     overflow-y: auto;
   }
-  
+
   .nav-menu.active,
   .nav-actions.active {
     right: 0;
   }
-  
+
   .nav-item {
     margin: 0.5rem 0;
     width: 100%;
   }
-  
+
   .nav-link {
     color: var(--dark-gray);
     justify-content: space-between;
     width: 100%;
     padding: 0.75rem 0;
   }
-  
+
   .dropdown-menu,
   .mega-menu {
     position: static;
@@ -352,32 +316,32 @@ li:nth-child(4) .mega-menu-item:nth-child(3) .mega-menu-icon {
     box-shadow: none;
     padding: 1rem 0;
   }
-  
+
   .mega-menu-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-  
+
   .mega-menu-item {
     padding: 1rem;
   }
-  
+
   .mega-menu-icon {
     width: 48px;
     height: 48px;
   }
-  
+
   .nav-actions {
     margin-top: 1.5rem;
     width: 100%;
     align-items: flex-start;
   }
-  
+
   .nav-actions .btn-primary {
     width: 100%;
     text-align: center;
   }
-  
+
   .cart-icon {
     color: var(--dark-gray);
     margin-top: 1rem;

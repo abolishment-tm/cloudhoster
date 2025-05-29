@@ -5,7 +5,6 @@ import { useLanguage } from '../../contexts/LanguageContext';
 import Logo from '../Common/Logo';
 import './MainNav.css';
 
-// Import custom SVG illustrations
 import sharedHosting from '../../assets/icons/shared-hosting.svg?url';
 import dedicatedHosting from '../../assets/icons/dedicated-hosting.svg?url';
 import emailHosting from '../../assets/icons/email-hosting.svg?url';
@@ -21,18 +20,13 @@ const MainNav: React.FC = () => {
   const { language } = useLanguage();
   const location = useLocation();
 
-  const handleScroll = () => {
-    setScrolled(window.scrollY > 50);
-  };
+  const handleScroll = () => setScrolled(window.scrollY > 50);
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
 
   const texts = {
     en: {
@@ -94,57 +88,60 @@ const MainNav: React.FC = () => {
   };
 
   const t = texts[language];
-
   const isWordPressPage = location.pathname === '/managed-wordpress';
   const navClassName = `main-nav ${scrolled ? 'scrolled' : ''} ${isWordPressPage ? 'managed-wordpress' : ''}`;
 
   return (
-    <nav className={navClassName}>
-      <div className="container">
-        <div className="nav-content">
-          <Link to="/" className="nav-logo">
-            <Logo size="medium" />
-          </Link>
-          <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle menu">
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-          <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
-            {['hosting', 'wordpress', 'domains'].map(section => (
-              <li key={section} className="nav-item has-dropdown">
-                <button className="nav-link">
-                  {t[section].title} <ChevronDown size={16} />
-                </button>
-                <div className="dropdown-menu mega-menu">
-                  <div className="mega-menu-grid">
-                    {t[section].items.map((item, index) => (
-                      <Link key={index} to={item.link} className="mega-menu-item">
-                        <div className="mega-menu-icon">
-                          <img src={item.icon} alt={item.name} className="w-16 h-16" />
-                        </div>
-                        <div className="mega-menu-content">
-                          <h3>{item.name}</h3>
-                          <p>{item.description}</p>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              </li>
-            ))}
-            <li className="nav-item">
-              <Link to="/pricing" className="nav-link">{t.pricing}</Link>
-            </li>
-          </ul>
-          <div className={`nav-actions ${isMenuOpen ? 'active' : ''}`}>
-            <Link to="/login" className="btn btn-primary">{t.login}</Link>
-            <Link to="/cart" className="cart-icon" aria-label="Shopping cart">
-              <ShoppingCart size={20} />
-              <span className="cart-badge">0</span>
+    <>
+      <nav className={navClassName}>
+        <div className="container">
+          <div className="nav-content">
+            <Link to="/" className="nav-logo">
+              <Logo size="medium" />
             </Link>
+            <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle menu">
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+            <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
+              {['hosting', 'wordpress', 'domains'].map(section => (
+                <li key={section} className="nav-item has-dropdown">
+                  <button className="nav-link">
+                    {t[section].title} <ChevronDown size={16} />
+                  </button>
+                  <div className="dropdown-menu mega-menu">
+                    <div className="mega-menu-grid">
+                      {t[section].items.map((item, index) => (
+                        <Link key={index} to={item.link} className="mega-menu-item">
+                          <div className="mega-menu-icon">
+                            <img src={item.icon} alt={item.name} />
+                          </div>
+                          <div className="mega-menu-content">
+                            <h3>{item.name}</h3>
+                            <p>{item.description}</p>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </li>
+              ))}
+              <li className="nav-item">
+                <Link to="/pricing" className="nav-link">{t.pricing}</Link>
+              </li>
+            </ul>
+            <div className={`nav-actions ${isMenuOpen ? 'active' : ''}`}>
+              <Link to="/login" className="btn btn-primary">{t.login}</Link>
+              <Link to="/cart" className="cart-icon" aria-label="Shopping cart">
+                <ShoppingCart size={20} />
+                <span className="cart-badge">0</span>
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+
+      {isMenuOpen && <div className="overlay" onClick={toggleMenu}></div>}
+    </>
   );
 };
 

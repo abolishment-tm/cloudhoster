@@ -23,8 +23,8 @@ const HomePage: React.FC = () => {
 
   const texts = {
     en: {
-      titleLine1: 'Get Worry-Free',
-      titleLine2: 'Web Hosting',
+      titleLine1: 'Secure Web Hosting',
+      titleLine2: 'Worry-Free',
       startNow: 'Start Now',
       moneyBack: '60 Days Money Back Guarantee',
       bullets: [
@@ -34,7 +34,7 @@ const HomePage: React.FC = () => {
       ]
     },
     id: {
-      titleLine1: 'Dapatkan Web Hosting',
+      titleLine1: 'Web Hosting Aman',
       titleLine2: 'Tanpa Khawatir',
       startNow: 'Mulai Sekarang',
       moneyBack: '60 Hari Garansi Uang Kembali',
@@ -49,46 +49,7 @@ const HomePage: React.FC = () => {
   const getContent = (type: string, key: string) =>
     contents.find(c => c.type === type && c.key === key && c.language === language)?.value;
 
-  // ---- Kenapa Pilih Kami ----
-  const features = [
-    {
-      icon: SecurityIcon,
-      title: getContent('features','security.title') ||
-             (language==='id' ? 'Keamanan Ditingkatkan' : 'Enhanced Security'),
-      description: getContent('features','security.description') ||
-             (language==='id'
-               ? 'Fitur keamanan canggih untuk melindungi situs web Anda'
-               : 'Advanced security features to protect your website'),
-    },
-    {
-      icon: BackupIcon,
-      title: getContent('features','backup.title') ||
-             (language==='id' ? 'Cadangan Harian' : 'Daily Backups'),
-      description: getContent('features','backup.description') ||
-             (language==='id'
-               ? 'Cadangan otomatis harian untuk situs web Anda'
-               : 'Automatic daily backups of your website'),
-    },
-    {
-      icon: PerformanceIcon,
-      title: getContent('features','performance.title') ||
-             (language==='id' ? 'Kinerja Tinggi' : 'High Performance'),
-      description: getContent('features','performance.description') ||
-             (language==='id'
-               ? 'Kecepatan muat super cepat dengan penyimpanan SSD'
-               : 'Lightning-fast loading speeds with SSD storage'),
-    },
-    {
-      icon: UptimeIcon,
-      title: getContent('features','reliability.title') ||
-             (language==='id' ? '99,9% Waktu Aktif' : '99.9% Uptime'),
-      description: getContent('features','reliability.description') ||
-             (language==='id'
-               ? 'Jaminan uptime untuk situs web Anda'
-               : 'Guaranteed uptime for your website'),
-    },
-  ];
-
+  
   // ---- Paket Hosting ----
   const products = [
     {
@@ -150,6 +111,46 @@ const HomePage: React.FC = () => {
       cta: getContent('products','email.cta') ||
            (language==='id' ? 'Mulai Sekarang' : 'Get Started'),
       link: '/email-hosting',
+    },
+  ];
+
+// ---- Kenapa Pilih Kami ----
+  const features = [
+    {
+      icon: SecurityIcon,
+      title: getContent('features','security.title') ||
+             (language==='id' ? 'Keamanan Ditingkatkan' : 'Enhanced Security'),
+      description: getContent('features','security.description') ||
+             (language==='id'
+               ? 'Fitur keamanan canggih untuk melindungi situs web Anda'
+               : 'Advanced security features to protect your website'),
+    },
+    {
+      icon: BackupIcon,
+      title: getContent('features','backup.title') ||
+             (language==='id' ? 'Cadangan Harian' : 'Daily Backups'),
+      description: getContent('features','backup.description') ||
+             (language==='id'
+               ? 'Cadangan otomatis harian untuk situs web Anda'
+               : 'Automatic daily backups of your website'),
+    },
+    {
+      icon: PerformanceIcon,
+      title: getContent('features','performance.title') ||
+             (language==='id' ? 'Kinerja Tinggi' : 'High Performance'),
+      description: getContent('features','performance.description') ||
+             (language==='id'
+               ? 'Kecepatan muat super cepat dengan penyimpanan SSD'
+               : 'Lightning-fast loading speeds with SSD storage'),
+    },
+    {
+      icon: UptimeIcon,
+      title: getContent('features','reliability.title') ||
+             (language==='id' ? '99,9% Waktu Aktif' : '99.9% Uptime'),
+      description: getContent('features','reliability.description') ||
+             (language==='id'
+               ? 'Jaminan uptime untuk situs web Anda'
+               : 'Guaranteed uptime for your website'),
     },
   ];
 
@@ -272,35 +273,10 @@ const HomePage: React.FC = () => {
         </div>
       </div>
 
-      {/* Kenapa Pilih Kami */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 text-center mb-16">
-          <h2 className="text-[50px] leading-[62px] font-extrabold text-[#2B1F51]">
-            {getContent('features','section.title') ||
-              (language==='id' ? 'Kenapa Pilih Kami' : 'Why Choose Us')}
-          </h2>
-          <p className="text-[24px] leading-[40px] font-light text-[#524972] max-w-3xl mx-auto">
-            {getContent('features','section.subtitle') ||
-              (language==='id'
-                ? 'Rasakan keunggulan fitur hosting terbaik'
-                : 'Experience the best hosting features for your website')}
-          </p>
-        </div>
-        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((f, i) => (
-            <div key={i} className="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
-              <img src={f.icon} alt="" className="w-full h-48 object-contain mx-auto mb-6" />
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{f.title}</h3>
-              <p className="text-gray-600">{f.description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* Paket Hosting */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="section-title-hosting mb-4">
             {getContent('products','section.title') ||
               (language==='id'
                 ? 'Paket Hosting untuk Semua Kebutuhan'
@@ -329,6 +305,31 @@ const HomePage: React.FC = () => {
                   {p.cta}<ArrowRight size={20} />
                 </Link>
               </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Kenapa Pilih CloudHoster? */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 text-center mb-16">
+          <h2 className="section-title-hosting">
+            {getContent('features','section.title') ||
+              (language==='id' ? 'Kenapa Pilih CloudHoster' : 'Why Choose CloudHoster')}
+          </h2>
+          <p className="section-subtitle">
+            {getContent('features','section.subtitle') ||
+              (language==='id'
+                ? 'Rasakan keunggulan fitur hosting terbaik'
+                : 'Experience the best hosting features for your website')}
+          </p>
+        </div>
+        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {features.map((f, i) => (
+            <div key={i} className="p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
+              <img src={f.icon} alt="" className="w-full h-48 object-contain mx-auto mb-6" />
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{f.title}</h3>
+              <p className="text-gray-600">{f.description}</p>
             </div>
           ))}
         </div>

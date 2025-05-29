@@ -1,63 +1,42 @@
 import React from 'react';
-import { Cloud } from 'lucide-react';
-import { useLanguage } from '../../contexts/LanguageContext';
 import './Logo.css';
+import LogoImage from '../../assets/logo/cloudhoster-logo-white.png?url';
 
 interface LogoProps {
   size?: 'small' | 'medium' | 'large';
-  showTagline?: boolean;
   variant?: 'light' | 'dark';
 }
 
-const Logo: React.FC<LogoProps> = ({ 
-  size = 'medium', 
-  showTagline = true,
-  variant = 'light'
+const Logo: React.FC<LogoProps> = ({
+  size = 'medium',
+  variant = 'light',
 }) => {
-  const { language } = useLanguage();
-  
-  const taglines = {
-    en: 'Hosting for all websites',
-    id: 'Hosting untuk semua website'
-  };
-  
-  const getIconSize = () => {
+  const getImageHeight = () => {
     switch (size) {
       case 'small':
-        return 28;
+        return '53px'; // sebelumnya 44px
       case 'medium':
-        return 40;
+        return '75px'; // sebelumnya 63px
       case 'large':
-        return 48;
+        return '104px'; // sebelumnya 87px
       default:
-        return 40;
+        return '75px';
     }
   };
-  
+
   return (
     <div className={`logo ${size} ${variant}`}>
       <div className="logo-icon">
-        <div className="cloud-wrapper">
-          <Cloud 
-            size={getIconSize()}
-            strokeWidth={1.5}
-            className="cloud-main"
-          />
-          <Cloud 
-            size={getIconSize() * 0.6}
-            strokeWidth={1.5}
-            className="cloud-accent"
-          />
-        </div>
-      </div>
-      
-      <div className="logo-text">
-        <div className="logo-brand-container">
-          <span className="logo-brand">CloudHoster</span>
-          {showTagline && (
-            <span className="logo-tagline">{taglines[language]}</span>
-          )}
-        </div>
+        <img
+          src={LogoImage}
+          alt="CloudHoster Logo"
+          style={{
+            height: getImageHeight(),
+            maxWidth: '100%',
+            objectFit: 'contain',
+            display: 'block',
+          }}
+        />
       </div>
     </div>
   );

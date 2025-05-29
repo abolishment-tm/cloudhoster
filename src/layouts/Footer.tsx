@@ -55,8 +55,7 @@ const Footer: React.FC = () => {
           {/* Logo + Payment Logos */}
           <div className="footer-logo">
             <Logo size="medium" showTagline={false} variant="dark" />
-            <p>{t.tagline}</p>
-            <div className="payment-methods">
+              <div className="payment-methods">
               <img src={BcaLogo}        alt="BCA"        className="h-9" />
               <img src={VisaLogo}       alt="Visa"       className="h-9" />
               <img src={MastercardLogo} alt="Mastercard" className="h-9" />

@@ -13,6 +13,31 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'AvertaStd';
+  src: url('/fonts/AvertaStd-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AvertaStd';
+  src: url('/fonts/AvertaStd-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AvertaStd';
+  src: url('/fonts/AvertaStd-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

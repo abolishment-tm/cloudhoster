@@ -1,0 +1,130 @@
+.hero-section {
+  background-color: #3a539b;
+  color: #ffffff;
+  position: relative;
+  padding: 4rem 2rem 7rem;
+  min-height: 864px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.hero-content {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.hero-title {
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 74px;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.hero-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 40px;
+  color: #ffffff;
+}
+
+.hero-bullets li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.hero-bullets img {
+  width: 24px;
+  height: 24px;
+}
+
+.hero-cta {
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  color: #ffffff;
+  background-color: #f97316;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  max-width: 240px;
+}
+
+.hero-cta:hover {
+  background-color: #fb923c;
+}
+
+.hero-guarantee {
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 540px;
+  height: auto;
+  animation: float 6s ease-in-out infinite;
+}
+
+/* WAVE BOTTOM */
+.wave-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  z-index: 1;
+  line-height: 0;
+}
+
+.wave-bottom svg {
+  display: block;
+  width: 100%;
+  height: 100px;
+  transform: rotate(180deg); /* ? agar gelombang menghadap ke atas */
+}
+
+.shape-fill {
+  fill: #ffffff;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}

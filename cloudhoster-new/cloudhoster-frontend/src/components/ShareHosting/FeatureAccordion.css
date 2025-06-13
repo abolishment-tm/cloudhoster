@@ -1,0 +1,44 @@
+.accordion-wrapper {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: 'AvertaStd', sans-serif;
+}
+
+.accordion-item {
+  border-top: 1px solid #ddd;
+}
+
+.accordion-header {
+  width: 100%;
+  background: none;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: #2B1F51;
+  padding: 1rem 0;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-icon {
+  font-size: 24px;
+  line-height: 1;
+  color: #2B1F51;
+}
+
+.accordion-content {
+  list-style: none;
+  padding: 0 0 1rem 1.5rem;
+  margin: 0;
+}
+
+.accordion-feature {
+  font-size: 18px;
+  color: #524972;
+  line-height: 1.8;
+}

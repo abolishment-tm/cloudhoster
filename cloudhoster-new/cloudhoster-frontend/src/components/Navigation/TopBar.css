@@ -1,0 +1,66 @@
+.top-bar {
+  width: 100%;
+  color: white;
+  font-family: 'AvertaStd', sans-serif;
+  font-size: 0.75rem; /* sedikit lebih kecil */
+  padding: 0.35rem 2rem; /* sedikit lebih atas bawah */
+  z-index: 50;
+  position: relative;
+  background-color: #1e3a8a; /* sama dengan main header */
+  /* border-bottom: none; // tidak ada border */
+}
+
+.top-bar-content {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end; /* rata kanan */
+  align-items: center;
+  gap: 1rem;
+}
+
+.top-menu-right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.top-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.top-item:hover {
+  opacity: 0.8;
+}
+
+.top-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
+
+.top-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: none;
+  border: none;
+  color: white;
+  font-family: 'AvertaStd', sans-serif;
+  cursor: pointer;
+  font-size: 0.75rem;
+  padding: 0.1rem 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.flag-icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+}

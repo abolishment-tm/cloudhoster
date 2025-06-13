@@ -1,0 +1,179 @@
+.header {
+  width: 100%;
+  font-family: 'AvertaStd', sans-serif;
+  z-index: 10;
+}
+
+/* === Sticky PromoBar === */
+.promo-bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* === Main Header Sticky (offset menyesuaikan PromoBar) === */
+.main-header {
+  padding: 0.3rem 0 0.9rem;
+  z-index: 90;
+  position: sticky;
+  top: var(--main-header-top, 0px);
+  background-color: #3a539b;
+}
+
+/* === BACKGROUND TopBar dan MainHeader === */
+.header-unified {
+  background-color: #3a539b;
+  color: white;
+}
+
+/* === TOP BAR === */
+.top-bar {
+  font-size: 14px;
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: 0px;
+  padding: 0.4rem 0;
+  z-index: 60;
+  position: relative;
+}
+
+.top-bar-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.top-links {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.top-toggle-group {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.top-link {
+  color: #CEC9DF;
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 30px;
+  letter-spacing: 0px;
+  cursor: pointer;
+}
+
+.flag-btn,
+.currency-btn {
+  background: none;
+  border: none;
+  color: #CEC9DF;
+  font-size: 14px;
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 600;
+  line-height: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.flag-icon {
+  width: 28px;
+  height: 15px;
+}
+
+/* === MAIN HEADER INNER === */
+.main-header-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.logo-area {
+  flex-shrink: 0;
+  transform: translateY(10px);
+}
+
+.logo-area .logo {
+  height: 65px;
+}
+
+.main-menu {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 0;
+  margin-right: 2rem;
+}
+
+.main-menu ul {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 0px;
+  color: #CEC9DF;
+}
+
+.main-menu li {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  cursor: pointer;
+}
+
+.arrow-icon {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) invert(1);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 2px;
+}
+
+.login-btn {
+  background-color: #f97316;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cart-icon {
+  width: 32px;
+  height: 32px;
+  margin-left: 8px;
+  filter: brightness(0) invert(1);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.top-icon {
+  width: 14px;
+  height: 14px;
+  margin-right: 4px;
+}

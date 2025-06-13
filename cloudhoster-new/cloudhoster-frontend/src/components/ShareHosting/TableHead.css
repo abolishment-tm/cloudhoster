@@ -1,0 +1,163 @@
+.table-head-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 0 1rem;
+  flex-wrap: wrap;
+}
+
+.table-head-box {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  width: 432px;
+  height: 338.67px;
+  position: relative;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  box-sizing: border-box;
+  font-family: 'AvertaStd', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.plan-name {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 34px;
+  color: #2B1F51;
+  margin-bottom: 0.25rem;
+}
+
+.plan-price {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 52px;
+  color: #2B1F51;
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.price-unit {
+  font-size: 16px;
+  font-weight: 500;
+  color: #2b1f51;
+  margin-left: 0; 
+}
+
+.plan-ribbon {
+  position: absolute;
+  top: -19px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  height: 38px;
+  background-color: #EE4B2B;
+  color: #ffffff;
+  font-family: 'AvertaStd', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: center;
+  padding-top: 4px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  z-index: 10;
+}
+
+.price-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.plan-original {
+  font-weight: 300;
+  font-size: 14px;
+  color: #999999;
+  text-decoration: line-through;
+}
+
+.plan-discount {
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0;
+  color: #F67A3C;
+}
+
+.discount-help-icon {
+  width: 16px;
+  height: 16px;
+  margin-left: 6px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.plan-cta {
+  background-color: #F67A3C;
+  color: #FFFFFF;
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  max-width: 240px;
+  margin: 0 auto;
+  transition: background-color 0.3s ease;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn__text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: padding-right 0.3s ease;
+}
+
+.plan-cta.has-arrow:hover .btn__text {
+  padding-right: 20px;
+}
+
+.arrow-icon {
+  position: absolute;
+  right: -4px;
+  top: 50%;
+  transform: translateY(-50%) translateX(8px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.plan-cta.has-arrow:hover .arrow-icon {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+.plan-datacenter {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 26px;
+  color: #2B1F51;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.flag-icon {
+  width: 28px;
+  height: 15px;
+  margin-left: 6px;
+  vertical-align: middle;
+}

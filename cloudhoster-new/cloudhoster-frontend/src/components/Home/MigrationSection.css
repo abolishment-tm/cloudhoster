@@ -1,0 +1,142 @@
+/* === Wrapper Section === */
+.migration-section {
+  padding: 3rem 1.5rem 4rem;
+  background-color: white;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+  .migration-section {
+    padding: 3rem 3rem 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .migration-section {
+    padding: 3rem 6rem 4rem;
+  }
+}
+
+/* === Judul Utama === */
+.migration-title-centered {
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 62px;
+  color: #2B1F51;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* === Container === */
+.migration-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 1024px) {
+  .migration-container {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 48px;
+  }
+}
+
+/* === Deskripsi Kiri === */
+.migration-text {
+  width: 100%;
+  max-width: 616px;
+  min-height: 480px;
+  box-sizing: border-box;
+}
+
+.migration-description {
+  font-family: 'AvertaStd';
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  color: #524972;
+}
+
+/* === Ilustrasi === */
+.migration-image-wrapper {
+  width: 100%;
+  max-width: 616px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.migration-image {
+  width: 100%;
+  height: auto;
+  max-width: 640px;
+  max-height: 640px;
+  object-fit: contain;
+  display: block;
+}
+
+/* === Step Grid === */
+.migration-steps-grid {
+  margin-top: 2rem;
+  display: grid;
+  gap: 2rem 3rem;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 640px) {
+  .migration-steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* === Step Box === */
+.migration-step-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+/* === Icon === */
+.migration-step-icon {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+/* === Judul Step === */
+.migration-step-title {
+  font-family: 'AvertaStd';
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 30px;
+  color: #2B1F51;
+  margin-bottom: 0.5rem;
+  min-height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* === Deskripsi Step === */
+.migration-step-desc {
+  font-family: 'AvertaStd';
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  color: #524972;
+  margin: 0;
+}

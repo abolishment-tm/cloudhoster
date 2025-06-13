@@ -1,0 +1,57 @@
+.tooltip-modal-container {
+  position: fixed;
+  inset: 0;
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+}
+
+.tooltip-modal-box {
+  background: #ffffff;
+  width: 894px;
+  max-width: 90%;
+  padding: 2rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  position: relative;
+  font-family: 'AvertaStd', sans-serif;
+  max-height: 560px;
+  overflow-y: auto;
+  z-index: 9999;
+}
+
+.tooltip-modal-close {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  font-size: 24px;
+  font-weight: bold;
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.tooltip-modal-close:hover {
+  color: #f67a3c;
+}
+
+.tooltip-modal-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #2B1F51;
+  margin-bottom: 1rem;
+  line-height: 32px;
+}
+
+.tooltip-modal-content {
+  font-size: 16px;
+  font-weight: 300;
+  color: #524972;
+  text-align: left;
+  line-height: 26px;
+  white-space: pre-line;
+}

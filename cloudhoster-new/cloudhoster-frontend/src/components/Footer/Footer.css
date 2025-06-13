@@ -1,0 +1,99 @@
+.footer {
+  background-color: #3a539b;
+  color: #ffffff;
+  padding: 4rem 2rem;
+  font-family: 'AvertaStd', sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 4rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.footer-logo {
+  width: 196px;
+  margin-bottom: 1.5rem;
+}
+
+/* Alamat perusahaan */
+.footer-address {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 26px;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+}
+
+/* Divider garis horizontal di bawah alamat */
+.footer-divider {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 1.5rem 0;
+  width: 100%;
+}
+
+/* Ikon pembayaran */
+.payment-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.payment-icons img {
+  height: 42px;
+  object-fit: contain;
+}
+
+/* Judul kolom */
+.footer-column h4 {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 30px;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+/* List teks dalam kolom */
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 26px;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+/* Bagian bawah kiri: copyright + links */
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  color: #ffffff;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Link TOS & Privacy */
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}

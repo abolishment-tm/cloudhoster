@@ -1,0 +1,382 @@
+.hero-section {
+  background-color: #3a539b;
+  color: #ffffff;
+  position: relative;
+  padding: 4rem 2rem 10rem;
+  min-height: 960px;
+  padding-bottom: 220px;
+  overflow: visible;
+  z-index: 2;
+}
+
+.hero-content {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.hero-title {
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 900;
+  font-size: 64px;
+  line-height: 74px;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.hero-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 40px;
+  color: #ffffff;
+}
+
+.hero-bullets li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.hero-bullets img {
+  width: 24px;
+  height: 24px;
+}
+
+.hero-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0 0;
+}
+
+.hero-cta {
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  color: #ffffff;
+  background-color: #f97316;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  display: inline-block;
+  max-width: 240px;
+}
+
+.hero-cta:hover {
+  background-color: #fb923c;
+}
+
+.hero-price-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-price-label {
+  font-family: 'AvertaStd', sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+}
+
+.hero-price-value {
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 800;
+  font-size: 32px;
+  color: #f97316;
+}
+
+.hero-price-value span {
+  font-weight: 400;
+  font-size: 18px;
+  color: #ffffff;
+  margin-left: 4px;
+}
+
+.hero-guarantee {
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+  color: #ffffff;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.hero-period-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 40px;
+  letter-spacing: 0;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  margin: 3.5rem auto 1rem;
+  position: relative;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.hero-period-tabs span:hover {
+  color: #f67a3c;
+}
+
+.hero-period-tabs .active {
+  color: #f67a3c;
+  border-bottom: 2px solid #f67a3c;
+}
+
+.hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 540px;
+  height: auto;
+}
+
+.wave-bottom {
+  position: absolute;
+  bottom: -20px; /* <== DITURUNKAN AGAR TIDAK TABRAKAN */
+  left: 0;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  z-index: 1;
+  line-height: 0;
+}
+
+.wave-bottom svg {
+  display: block;
+  width: 100%;
+  height: 100px;
+  transform: none;
+}
+
+.shape-fill {
+  fill: #ffffff;
+}
+
+.pricing-table-head-wrapper {
+  position: absolute;
+  bottom: -180px; /* <== DITURUNKAN AGAR HANYA 20% MASUK KE HERO */
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  z-index: 3;
+}
+
+.table-head-card {
+  width: 432px;
+  height: 338.67px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'AvertaStd', sans-serif;
+  text-align: center;
+}
+
+.table-head-card h3 {
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 34px;
+  color: #2B1F51;
+  margin: 0;
+}
+
+.table-head-card .price {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 52px;
+  color: #2B1F51;
+  margin: 0.5rem 0;
+}
+
+.table-head-card .discount {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 26px;
+  color: #f67a3c;
+  margin: 0;
+}
+
+.table-head-card button {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 30px;
+  color: #ffffff;
+  background-color: #f97316;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.table-head-card button:hover {
+  background-color: #fb923c;
+}
+
+.table-head-card .datacenter {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 26px;
+  color: #6F52C5;
+  margin-top: 0.5rem;
+}
+
+.pricing-section {
+  margin-top: 120px;
+}
+
+.addon-wrapper-outer {
+  max-width: 1200px;
+  margin: 2rem auto 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.pricing-section {
+  padding: 2rem 0;
+}
+
+.pricing-and-addon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.addon-wrapper-outer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.see-all-wrapper {
+  text-align: center;
+  margin: 3rem 0 2rem 0;
+}
+
+.see-all-button {
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #f97316;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.see-all-button:hover {
+  color: #fb923c;
+}
+
+.feature-compare-section {
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+.see-all-wrapper {
+  text-align: center;
+  margin-bottom: 4rem; 
+}
+
+.shared-feature-section {
+  padding: 4rem 1rem;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.shared-feature-title {
+  font-family: 'AvertaStd', sans-serif;
+  font-size: 50px;
+  line-height: 62px;
+  color: #2B1F51;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 800;
+}
+
+.shared-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.shared-feature-box {
+  text-align: center;
+  padding: 1rem;
+}
+
+.shared-feature-box img {
+  height: 88px;
+  width: 88px;
+  margin-bottom: 1rem;
+}
+
+.shared-feature-box h3 {
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 600;
+  color: #2B1F51;
+  margin-bottom: 0.5rem;
+  font-family: 'AvertaStd', sans-serif;
+}
+
+.shared-feature-box p {
+  font-size: 18px;
+  line-height: 30px;
+  color: #524972;
+  line-height: 1.5;
+  font-family: 'AvertaStd', sans-serif;
+}

@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset dan full size layout */
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  font-family: 'AvertaStd', sans-serif;
+  background-color: #ffffff;
+}
+
+/* Disable horizontal scroll */
+body {
+  overflow-x: hidden;
+}
+
+/* Anti scroll horizontal & box-sizing fix */
+* {
+  box-sizing: border-box;
+}

@@ -1,0 +1,347 @@
+/* === Wrapper Section === */
+.feature-compare-section {
+  width: 100%;
+  padding: 2rem 0;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+/* === Judul Section === */
+.compare-title {
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 62px;
+  letter-spacing: 0;
+  text-align: center;
+  color: #2B1F51;
+  margin-bottom: 8rem;
+}
+
+/* === Wrapper Tabel === */
+.compare-table-scroll {
+  width: 100%;
+  overflow-x: visible;
+  display: flex;
+  justify-content: center;
+}
+
+/* === Tabel Utama === */
+.compare-table {
+  width: 1360px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+/* === Header Tabel === */
+.compare-table thead th {
+  height: 294px;
+  padding: 0;
+  vertical-align: top;
+  background-color: #f9fafb;
+  border-bottom: 1px solid #eaeaea;
+  box-sizing: border-box;
+}
+
+.feature-col-header {
+  width: 355px;
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0;
+  color: #524972;
+  padding: 20px;
+}
+
+.plan-col-header {
+  width: 334.67px;
+  max-width: 334.67px;
+  min-width: 334.67px;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* === Header Plan Info === */
+.plan-name {
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 34px;
+  letter-spacing: 0;
+  color: #2B1F51;
+  margin-top: 24px;
+}
+
+.plan-price-row {
+  margin-bottom: 8px;
+  
+}
+
+.plan-original-price {
+  text-decoration: line-through;
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #2B1F51;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.plan-discount {
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  color: #F67A3C;
+  letter-spacing: 0;
+  cursor: pointer;
+}
+
+.plan-current-price {
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 62px;
+  color: #2B1F51;
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+
+.compare-cta {
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 30px;
+  color: #FFFFFF;
+  background-color: #F67A3C;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+/* === Body Tabel === */
+.compare-table tbody td {
+  height: 56px;
+  padding: 0 20px;
+  font-family: 'AvertaStd', sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #2B1F51;
+  text-align: left;
+  vertical-align: middle;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eaeaea;
+}
+
+/* Kolom kiri (label fitur) = SemiBold */
+.feature-col {
+  font-weight: 600; /* ✅ SemiBold */
+  padding-left: 20px;
+  width: 355px;
+  min-width: 355px;
+  max-width: 355px;
+  font-size: 18px;
+  line-height: 30px;
+  color: #2B1F51;
+  font-family: 'AvertaStd', sans-serif;
+}
+
+/* Isi kolom plan (value fitur) = Light */
+.plan-col {
+  font-weight: 300; /* ✅ Light */
+  text-align: center;
+  width: 334.67px;
+  max-width: 334.67px;
+  font-size: 18px;
+  line-height: 30px;
+  color: #2B1F51;
+  font-family: 'AvertaStd', sans-serif;
+}
+
+.feature-col {
+  width: 355px;
+  min-width: 355px;
+  max-width: 355px;
+  font-weight: 600;
+  padding-left: 20px;
+}
+
+.plan-col {
+  width: 334.67px;
+  max-width: 334.67px;
+  text-align: center;
+}
+
+/* === Icon Style === */
+.check-icon {
+  width: 25px;
+  height: 24px;
+}
+
+.x-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.help-icon {
+  width: 16px;
+  height: 16px;
+  margin-left: 6px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+/* === Baris Warna === */
+.row-even {
+  background-color: #ffffff;
+}
+
+.row-odd {
+  background-color: #f9fafb;
+}
+
+.highlight-line {
+  margin-bottom: 12px;
+}
+
+.bold {
+  font-weight: 700;
+  color: #2B1F51;
+}
+
+.plan-price-unit {
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 26px;
+  color: #2B1F51;
+  margin-left: 4px;
+}
+
+.feature-compare-wrapper {
+  width: 100%;
+  padding-top: 5rem; /* ✅ tambahkan ini */
+  padding-bottom: 3rem;
+  background-color: #fff;
+}
+
+/* === Accordion Section Fix === */
+.feature-accordion-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4f1fc;
+  padding: 0;
+  justify-content: center;
+  margin-top: 0.25rem;
+}
+
+.accordion-category {
+  width: 1360px;
+  background-color: #f4f1fc;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 0.125rem;
+}
+
+.category-header {
+  width: 100%;
+  background-color: #3a539b;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  font-family: 'AvertaStd', sans-serif;
+  font-style: normal;
+  font-weight: 700; /* Bold */
+  font-size: 26px;
+  line-height: 34px;
+  letter-spacing: 0px;
+  color: #2B1F51;
+  box-sizing: border-box;
+}
+
+.category-toggle-icon {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.accordion-row {
+  display: flex;
+  align-items: left;
+  height: 56px;
+  background-color: #ffffff;
+  font-family: 'AvertaStd', sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #2B1F51;
+  border-top: 1px solid #eaeaea;
+  box-sizing: border-box;
+}
+
+.accordion-row:nth-child(even) {
+  background-color: #f9fafb;
+  margin-bottom: 0
+}
+
+.accordion-row .feature-col {
+  width: 355px;
+  min-width: 355px;
+  max-width: 355px;
+  font-weight: 600;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.accordion-row .plan-col {
+  width: 334.67px;
+  max-width: 334.67px;
+  text-align: left;
+  font-weight: 300;
+  padding-left: 20px;
+}
+
+/* Optional: adjust help icon inside accordion */
+.accordion-row .help-icon {
+  margin-left: 6px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.accordion-category-title {
+  text-align: left;
+  padding: 1.5rem 1.5rem;
+  padding-left: 20px;
+  font-family: 'AvertaStd', sans-serif;
+  font-weight: 600; /* Bold */
+  font-size: 26px;
+  line-height: 34px;
+  letter-spacing: 0px;
+  color: #2B1F51;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #f4f1fc;
+  cursor: pointer;
+}
+
+.compare-table th,
+.compare-table td {
+  border: 1px solid #e5e7eb;
+}
+
+.accordion-category-title:hover {
+  background-color: #f4f1fc; 
+  color: #F67A3C;
+}
+

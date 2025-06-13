@@ -1,0 +1,39 @@
+.cta-section {
+  background-color: #3a539b;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: white;
+}
+
+.cta-title {
+  font-family: 'AvertaStd', sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 56px;
+}
+
+.cta-subtext {
+  font-family: 'AvertaStd', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  line-height: 32px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background-color: #f97316;
+  color: white;
+  font-family: 'AvertaStd', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #fb923c;
+}

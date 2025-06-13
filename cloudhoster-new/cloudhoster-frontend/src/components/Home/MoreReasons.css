@@ -1,0 +1,69 @@
+.more-reasons-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.more-reasons-title {
+  font-family: 'AvertaStd';
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 62px;
+  color: #2B1F51;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.more-reasons-subtitle {
+  font-family: 'AvertaStd';
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 40px;
+  color: #524972;
+  max-width: 800px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.more-reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 48px;
+  width: 100%;
+}
+
+.reason-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 12px;
+}
+
+.reason-icon {
+  width: 88px;
+  height: 90px;
+  display: block;
+}
+
+.reason-title {
+  font-family: 'AvertaStd';
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 30px;
+  color: #2B1F51;
+  margin-top: 12px; /* jarak dari ikon ke judul */
+  margin-bottom: 8px; /* jarak dari judul ke deskripsi */
+}
+
+.reason-desc {
+  font-family: 'AvertaStd';
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  color: #524972;
+  margin: 0; /* nolkan semua margin tambahan */
+}

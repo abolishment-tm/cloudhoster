@@ -1,0 +1,126 @@
+.product-section {
+  background-color: #ffffff;
+}
+
+/* Font styles */
+.product-section h2,
+.product-section p,
+.product-section h3,
+.product-section a,
+.product-section span {
+  font-family: 'AvertaStd', sans-serif;
+}
+
+.font-averta-extrabold { font-weight: 800; }
+.font-averta-light { font-weight: 300; }
+.font-averta-bold { font-weight: 700; }
+.font-averta-semibold { font-weight: 600; }
+
+/* Grid container */
+@media (min-width: 1024px) {
+  .product-section .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+
+/* Product card base */
+.product-section .text-center {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  transition: box-shadow 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+.product-section .text-center:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Product image */
+.product-section img {
+  width: 126px;
+  height: 106px;
+  object-fit: contain;
+  margin-bottom: 0.25rem;
+}
+
+/* Title & description spacing */
+.product-section .text-center h3 {
+  margin-bottom: 0.25rem;
+  min-height: 34px;
+}
+.product-section .text-center p {
+  min-height: 52px;
+  margin-bottom: 0.75rem;
+}
+
+/* Harga dan CTA container */
+.product-section .card-bottom {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Harga */
+.product-section .price-line {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+.product-section .price-line .amount {
+  font-size: 40px;
+  line-height: 52px;
+  font-weight: 800;
+  color: #2B1F51;
+}
+.product-section .price-line .per {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 300;
+  color: #524972;
+}
+
+/* CTA Link */
+.product-section .product-link {
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0px;
+  font-weight: 600;
+  color: #3a539b;
+  font-family: 'AvertaStd', sans-serif;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.2s ease-in-out;
+}
+
+.product-section .product-link:hover {
+  color: #F67A3C;
+  cursor: pointer;
+}
+
+.product-section .product-link svg {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  width: 14px;
+  height: 14px;
+  margin-left: 0.25rem;
+}
+
+.product-section .product-link:hover svg {
+  opacity: 1;
+  animation: arrow-bounce 0.6s infinite ease-in-out;
+}
+
+@keyframes arrow-bounce {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(6px); }
+}
